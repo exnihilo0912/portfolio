@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+html, body {
+    font-family: "Josefin Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: hsl(0, 6%, 24%);
+}
+
+/** LAYOUT **/
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+.hero__header {
+    padding: 25px;
+    box-sizing: border-box;
+    grid-area: header;
+}
+
+.logo {
+    max-height: 25px;
+}
+.hero__image {
+    grid-area: image;
+}
+.image--mobile {
+    width: 100%;
+}
+
+.image--desktop {
+    display: none;
+}
+.hero__content {
+    padding: 25px;
+    grid-area: content;
+    max-width: 500px;
+}
+.hero-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.hero-title__thin {
+    font-weight: 300;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: hsl(0, 36%, 70%)
+}
+.hero-title__fat {
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.hero-caption {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .image--mobile {
+        display: none;
+    }
+    .image--desktop {
+        display: initial;
+        height: 100%;
+        width: 100%;
+    }
+    .hero {
+        display: grid;
+        grid-template-rows: [header] 80px calc(100vh - 80px);
+        grid-auto-columns: 1fr 1fr auto;
+        grid-template-areas: "header image" "content image";
+    }
+    .hero__header, .hero__content {
+        padding-left: 12vw;
+        text-align: left;
+        padding-right: 15vw;
+        margin-top: 0;
+        background: url("images/bg-pattern-desktop.svg") no-repeat top left/cover;
+    }
+    .hero__header {
+        padding-top: 48px;
+    }
+    .hero-caption {
+        margin-bottom: 40px;
+    }
+    .hero-title__thin, .hero-title__fat, .hero-caption {
+        text-align: left;
+    }
+    .hero__content {
+        padding-top: 80px;
+        background: url("images/bg-pattern-desktop.svg") no-repeat top -80px left/cover;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+}
+
+/** COMPONENTS **/
+
+.input-group {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.input-group__input {
+    border-radius: 40px;
+    border: 1px solid hsl(0, 36%, 70%);
+    padding: 10px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 22px;
+    color: hsl(0, 36%, 70%);
+    outline: hsl(0, 74%, 74%);
+}
+.input-group__button {
+    border-radius: 40px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 9px 16px;
+    font-size: 18px;
+    line-height: 22px;
+    width: 60px;
+    position: absolute;
+    right: 0;
+    border: transparent 1px solid;
+    box-shadow: 0 8px 20px hsla(0, 74%, 74%, .5);
+    transition: all .25s ease;
+}
+.input-group__button:active, .input-group__button:focus {
+    background: hsl(0, 36%, 70%);
+}
+
+@media only screen and (min-width: 768px) {
+    .input-group__button {
+        padding: 9px 16px;
+        width: 80px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+}

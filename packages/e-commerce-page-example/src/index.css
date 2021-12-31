@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Theme - Colors & Typography */
+:root {
+  --text-color: hsl(220, 13%, 13%);
+  --text-secondary-color: hsl(219, 9%, 45%);
+  --text-tertiary-color: hsl(220, 14%, 75%);
+  --text-accent-color: hsl(26, 100%, 55%);
+  --text-contrast-color: hsl(0, 0%, 100%);
+
+  --bg-color: hsl(0, 0%, 100%);
+  --bg-accent-color: hsl(26, 100%, 55%);
+  --bg-primary-color: hsl(25, 100%, 94%);
+  --bg-secondary-color: hsl(223, 64%, 98%);
+  --bg-tertiary-color: hsl(0, 0%, 0%);
+
+  /*  Breakpoints */
+  --desktop-min: 1440px;
+  --mobile-max: 375px;
+
+  /*  Typography - size */
+  --font-size-small: 9px;
+  --font-size-smaller: 12px;
+  --font-size-small: 14px;
+  --font-size-regular: 16px;
+  --font-size-button: 1.1rem;
+  --font-size-big: 24px;
+  --font-size-bigger: 32px;
+  --font-size-biggest: 48px;
+  /*  Typography - weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Radius and spacing */
+  --button-radius: 10px;
+}
+
+/* TODO Add dark theme colors */
+[data-theme="dark"] {
+  --primary-color: #000000;
+  --secondary-color: #000000;
+  --accent-color: #000000;
+  --accent-2-color: #000000;
+  --text-color: #000000;
+  --text-secondary-color: #000000;
+  --text-accent-color: #000000;
+  --text-accent-2-color: #000000;
+  --bg-color: #000000;
+  --bg-secondary-color: #000000;
+}
+/* TODO Add complementary blueish colors */
+[data-theme="blues"] {
+  --primary-color: #000000;
+  --secondary-color: #000000;
+  --accent-color: #000000;
+  --accent-2-color: #000000;
+  --text-color: #000000;
+  --text-secondary-color: #000000;
+  --text-accent-color: #000000;
+  --text-accent-2-color: #000000;
+  --bg-color: #000000;
+  --bg-secondary-color: #000000;
+}
+
+/* ----- */
+
+/* Global & Reset */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----- */
+
+/* UI */
+  .bg {
+    background-color: var(--bg-color);
+  }
+  .bg-primary {
+    background-color: var(--bg-primary-color);
+  }
+  .bg-secondary {
+    background-color: var(--bg-secondary-color);
+  }
+  .bg-tertiary {
+    background-color: var(--bg-tertiary-color);
+  }
+  .bg-accent {
+    background-color: var(--bg-accent-color);
+  }
+/* ----- */
+
+/* Typography */
+  p, span, time, address {
+    margin: 0;
+    padding: 0;
+  }
+  .text {
+    color: var(--text-color);
+    font-size: var(--font-size-regular);
+  }
+  .text--small {
+    font-size: var(--font-size-small);
+  }
+  .text--smaller {
+    font-size: var(--font-size-smaller);
+  }
+  .text--smallest {
+    font-size: var(--font-size-smallest);
+  }
+  .text--big {
+    font-size: var(--font-size-big);
+  }
+  .text--bigger {
+    font-size: var(--font-size-bigger);
+  }
+  .text--biggest {
+    font-size: var(--font-size-biggest);
+  }
+  .text--secondary {
+    color: var(--text-secondary-color);
+  }
+  .text--tertiary {
+    color: var(--text-tertiary-color)
+  }
+  .text--contrast {
+    color: var(--text-contrast-color);
+  }
+  .text--accent {
+    color: var(--text-accent-color);
+  }
+  .text--bold {
+    font-weight: var(--font-weight-bold);
+  }
+  .logo {
+    font-size: var(--font-size-logo);
+    font-weight: var(--font-weight-bold);
+  }
+/* ----- */
+
+/* Structures */
+.flex {
+  display: flex;
+}
+.flex--justify-center {
+  justify-content: center;
+}
+.flex--align-center {
+  align-items: center;
+}
+.gap--1 {
+  gap: 8px;
+}
+.gap--2 {
+  gap: 16px;
+}
+.gap--3 {
+  gap: 24px;
+}
+.gap--4 {
+  gap: 32px;
+}
+
+/* ----- */
+
+/* Responsive */
+  @media screen and (max-width: 600px) {
+    .desktop-only {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+/* ----- */
+
+/* Elements */
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  overflow: scroll;
+  flex: 1;
+  height: 100%;
+}
+.product-page__picture > img {
+  width: 100%;
+  height: auto;
+}
+.product-page__content {
+  padding: 16px 24px;
+}
+.product-page__subtitle {
+  color: var(--text-accent-color);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: var(--font-size-smaller);
+}
+.product-page__title {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-big);
+  margin-bottom: 16px;
+}
+
+.product-page__description {
+  color: var(--text-secondary-color);
+  font-size: var(--font-size-small);
+  margin-bottom: 16px;
+}
+.product-page__price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-page__current-price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product-page__previous-price {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-tertiary-color);
+  text-decoration: line-through;
+}
+.product-page__price {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-bold);
+}
+.product-page__actions {
+  margin-top: 16px;
+}
+.tag {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  background: lightgray;
+  line-height: var(--font-size-small);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.tag.tag--primary {
+  background: var(--bg-primary-color);
+  color: var(--text-accent-color);
+}
+.input {
+  border: none;
+}
+.input--bg-transparent {
+  background: transparent;
+}
+.input--text-center {
+  text-align: center;
+}
+.input--compact {
+  width: 5rem;
+}
+.input--text-big {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.input-group {
+  height: calc(var(--font-size-button) + 2rem);
+  padding: 1rem;
+  background: var(--bg-secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--button-radius);
+}
+.form {
+
+}
+.form--vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* ----- */

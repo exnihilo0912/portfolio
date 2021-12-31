@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="title">Learn to code by watching others</h1>
+      <p class="caption">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </header>
+
+    <div class="content">
+      <div class="alert alert--purple"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
+
+      <form class="form" action="#" method="post">
+        <div class="input-group">
+          <input  type="text" id="firstname" name="firstname" class="input-group__input" required>
+          <label for="firstname" class="input-group__label">First Name</label>
+          <img class="input-group__error-icon" src="images/icon-error.svg" alt="error icon"/>
+          <span class="input-group__error">First Name cannot be empty</span>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="lastname" name="lastname" class="input-group__input" required>
+          <label for="lastname" class="input-group__label">Last Name</label>
+          <img class="input-group__error-icon" src="images/icon-error.svg" alt="error icon"/>
+          <span class="input-group__error">First Name cannot be empty</span>
+        </div>
+
+        <div class="input-group">
+          <input id="email" name="email" type="email" class="input-group__input" required>
+          <label class="input-group__label" for="email">Email Address</label>
+          <img class="input-group__error-icon" src="images/icon-error.svg" alt="error icon"/>
+          <span class="input-group__error">Looks like this is not as email</span>
+        </div>
+
+        <div class="input-group">
+          <input id="password" name="password" type="password" class="input-group__input" required>
+          <label for="password" class="input-group__label">Password</label>
+          <img class="input-group__error-icon" src="images/icon-error.svg" alt="error icon"/>
+          <span class="input-group__error">Password cannot be empty</span>
+        </div>
+
+        <button class="btn btn--fat btn--green btn--rised" type="submit">Claim your free trial</button>
+
+        <footer class="form__footer">
+          <p class="fine-print">
+            By clicking the button, you are agreeing to our <a href="#" class="highlight">Terms and Services</a>
+          </p>
+        </footer>
+      </form>
+    </div>
+  </main>
+
+  <script src="error_handling.js"></script>
+</body>
+</html>

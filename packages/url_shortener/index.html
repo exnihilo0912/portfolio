@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Shortly URL</title>
+</head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <img class="header__logo" src="images/logo.svg" alt="header logo">
+      <ion-icon class="header__nav-icon-m dropdown" name="menu" data-target=".header__nav"></ion-icon>
+      <nav class="header__nav">
+        <ul class="list list--nav">
+          <li class="list__item">Features</li>
+          <li class="list__item">Pricing</li>
+          <li class="list__item">Resources</li>
+        </ul>
+        <ul class="list list--nav">
+          <li class="list__item">Login</li>
+          <li class="list__item">
+            <button class="btn btn--big btn--small-d">Sign Up</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <img  class="landing-img" src="images/illustration-working.svg" alt="">
+
+      <section class="landing-intro container">
+        <h1 class="title title--main">More than just shorter links</h1>
+        <p class="caption">
+          Build your brand’s recognition and get detailed insights
+          on how your links are performing.
+        </p>
+        <button class="btn btn--fat">Get Started</button>
+      </section>
+
+      <div class="url-container container container--bg">
+        <form class="form" action="#" method="post" novalidate>
+          <div class="input-group">
+            <label for="url" class="input-group__label hidden"></label>
+            <input id="url" name="url" class="input-group__input" type="url" placeholder="Shorten a link here..." />
+            <p class="input-group__error">Please add a link</p>
+          </div>
+          <button class="btn btn--soft-corner" type="submit">Shorten It!</button>
+        </form>
+        <div class="card-container">
+          <div class="loading"></div>
+        </div>
+      </div>
+
+      <section class="container container--bg">
+        <h2 class="title">Advanced Statistics</h2>
+        <p class="caption">
+          Track how your links are performing across the web with our
+          advanced statistics dashboard.
+        </p>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="timeline__icon">
+              <img src="images/icon-brand-recognition.svg" alt="icon recognition">
+            </div>
+            <h3 class="timeline__title">Brand Recognition</h3>
+            <p class="timeline__caption">
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your content.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline__icon">
+              <img src="images/icon-detailed-records.svg" alt="icon recognition">
+            </div>
+            <h3 class="timeline__title">Detailed Records</h3>
+            <p class="timeline__caption">
+              Gain insights into who is clicking your links. Knowing when and where
+              people engage with your content helps inform better decisions.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline__icon">
+              <img src="images/icon-fully-customizable.svg" alt="icon recognition">
+            </div>
+            <h3 class="timeline__title">Fully Customizable</h3>
+            <p class="timeline__caption">
+              Improve brand awareness and content discoverability through customizable
+              links, supercharging audience engagement.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container container--purple">
+        <h2 class="title title--white">Boost your links today</h2>
+        <button class="btn btn--fat">Get Started</button>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer__logo"></div>
+      <ul class="list list--footer">
+        <li class="list__item list__item--title">Features</li>
+        <li class="list__item"><a>Link Shortening</a></li>
+        <li class="list__item"><a>Branded Links</a></li>
+        <li class="list__item"><a>Analytics</a></li>
+      </ul>
+      <ul class="list list--footer">
+        <li class="list__item list__item--title">Resources</li>
+        <li class="list__item"><a>Blog</a></li>
+        <li class="list__item"><a>Developers</a></li>
+        <li class="list__item"><a>Support</a></li>
+      </ul>
+      <ul class="list list--footer">
+        <li class="list__item list__item--title">Company</li>
+        <li class="list__item"><a>About</a></li>
+        <li class="list__item"><a>Our Team</a></li>
+        <li class="list__item"><a>Careers</a></li>
+        <li class="list__item"><a>Contact</a></li>
+      </ul>
+      <ul class="list list--hori">
+        <li class="list__item">
+          <a class="sns" href="https://www.facebook.com" aria-label="facebook">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="list__item">
+          <a class="sns" href="https://www.twitter.com" aria-label="twitter">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="list__item">
+          <a class="sns" href="https://www.pinterest.com" aria-label="pinterest">
+            <ion-icon name="logo-pinterest"></ion-icon>
+          </a>
+        </li>
+        <li class="list__item">
+          <a class="sns" href="https://www.instagram.com" aria-label="instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </main>
+  <script src="src/main.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>

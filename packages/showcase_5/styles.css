@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/** VARIABLES **/
+:root {
+    --primary: linear-gradient(135deg,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    --lighter: hsl(240, 78%, 98%);
+    --light: hsl(234, 14%, 74%);
+    --secondary: hsl(233, 13%, 49%);
+    --dark: hsl(232, 13%, 33%);
+}
+
+html, body, .container {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+}
+
+/** LAYOUT **/
+.container {
+    background: url("images/bg-top.svg") no-repeat top right, var(--lighter);
+        background-size: 85%;
+        background-position-x: 200px;
+        background-position-y: -35px;
+}
+
+.header {
+    padding: 5vw;
+    text-align: center;
+}
+.header__title {
+    font-size: 2rem;
+        font-weight: 700;
+    color: var(--secondary);
+}
+.header__toggle {
+    color: var(--light);
+    font-weight: 700;
+}
+
+.card-container {
+    padding: 5vw;
+}
+.card-container > .card {
+    margin: 2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .card-container > .card {
+        margin: 2rem auto;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        background: url("images/bg-top.svg") no-repeat top right,
+            url("images/bg-bottom.svg") no-repeat bottom left, var(--lighter);
+    }
+    .card-container {
+        display: flex;
+            justify-content: center;
+            align-items: flex-start;
+    }
+    .header {
+        padding: 3rem;
+    }
+    .header__toggle {
+        position: relative;
+            top: -.5rem;
+    }
+}
+
+/** COMPONENTS **/
+.toggle {
+    display: none;
+}
+.toggle+label{
+    display: inline-block;
+        width: 3rem;
+        height: 1.8rem;
+    border: none;
+        border-radius: 40px;
+    background: var(--primary);
+    position: relative;
+    transition: all .5s ease;
+    margin: 0 1rem;
+}
+.toggle+label:hover {
+    opacity: .7;
+}
+.toggle+label::after {
+    content: "";
+    display: inline-block;
+        width: 1.25rem;
+        height: calc(1.8rem - 8px);
+    position: absolute;
+        top: 4px;
+        left: 5px;
+    border: none;
+        border-radius: 90px;
+    background-color: white;
+    transition: all .5s ease;
+}
+.toggle:checked+label::after {
+    transform: translateX(1rem);
+}
+
+.card {
+    border: none;
+        border-radius: 6px;
+    text-align: center;
+    background-color: white;
+    padding: 1.5rem;
+    transition: all .5s ease;
+}
+.card--gradient {
+    background: var(--primary);
+    color: white;
+}
+.card__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.card__content {
+    margin-bottom: 1rem;
+}
+.card__price {
+    font-size: 3rem;
+        font-weight: 700;
+        color: var(--dark);
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+.card  .list  .list__item {
+    font-weight: 700;
+    color: var(--secondary);
+}
+.card.card--gradient .list .list__item {
+    color: white;
+    border-color: var(--lighter);
+}
+.card__price .annually, .card__price .monthly {
+    transition: opacity 1s ease, max-width .15s linear, max-height .4s linear;
+}
+.card--gradient .card__price, .card--gradient .card__title {
+    color: white;
+}
+.toggle:checked ~ .card-container .card .card__price span:not(.monthly),
+.toggle:not(:checked) ~ .card-container .card .card__price span:not(.annually)
+{
+    visibility: hidden;
+    opacity: 0;
+    max-width: 0;
+    max-height: 0;
+}
+.toggle:checked ~ .card-container .card .card__price span.monthly,
+.toggle:not(:checked) ~ .card-container .card .card__price span.annually {
+    visibility: visible;
+    opacity: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+.card__title {
+    color: var(--secondary);
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list__item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light);
+}
+.list__item:first-of-type {
+    border-top: 1px solid var(--light);
+}
+
+.btn {
+    padding: .7rem 1rem;
+    border: 1px solid transparent;
+        border-radius: 4px;
+    margin: .5rem;
+    cursor: pointer;
+}
+.btn--fat {
+    font-weight: 700;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+}
+.btn--full {
+    width: 100%;
+}
+.btn--gradient {
+    background: var(--primary);
+    color: white;
+}
+.btn--gradient:active {
+    background: transparent;
+        color: hsl(237, 63%, 64%);
+        border-color: hsl(237, 63%, 64%);
+}
+.btn--white {
+    background-color: white;
+        color: hsl(237, 63%, 64%);
+}
+.btn--white:active {
+    background-color: transparent;
+        border-color: white;
+        color: white;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .card {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .card {
+        min-height: 420px;
+        width: calc(100vw / 4.5);
+        box-sizing: content-box;
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+    }
+    .card-container .card:nth-of-type(2) {
+        min-height: 460px;
+        position: relative;
+            top: -20px;
+    }
+    .card__title {
+        font-size: 1.2rem;
+    }
+    .card__price {
+        font-size: 5rem;
+    }
+    .list__item:last-of-type {
+        border-bottom: none;
+    }
+}
+
+/** typography **/
+.small {
+    font-size: 1.8rem;
+}
+
+@media only screen and (min-width: 1440px) {
+    .small {
+        font-size: 2.5rem;
+    }
+}
