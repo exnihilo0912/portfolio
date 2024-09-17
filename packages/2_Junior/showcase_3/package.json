@@ -1,0 +1,14 @@
+{
+  "name": "showcase_3",
+  "version": "1.0.0",
+  "description": "![Design preview for the Product list with cart coding challenge](./preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam EMMANUEL",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.78.0"
+  }
+}
