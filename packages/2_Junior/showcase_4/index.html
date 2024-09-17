@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="src/styles/css/main.css"/>
-  <title>Frontend Mentor | Contact form</title>
-</head>
-<body>
-  <main class="container">
-    <form name="contact-form">
-      <header>
-        <h1>Contact Us</h1>
-      </header>
-      <section>
-        <div>
-          <label for="firstname">First Name</label>
-          <input id="firstname" name="firstname" type="text"/>
-          <p>This field is required</p>
-        </div>
-        <div>
-          <label for="firstname">Last Name</label>
-          <input id="lastname" name="lastname" type="text" />
-          <p>This field is required</p>
-        </div>
-        <div>
-          <label for="firstname">Email Address</label>
-          <input id="email" name="email" type="email" />
-          <p>
-              Please enter a valid email address
-              This field is required
-          </p>
-        </div>
-      </section>
-      <section>
-        <fieldset>
-          <legend>Query Type</legend>
-          <ul>
-            <li>
-              <label for="general-inquiry">General Enquiry</label>
-              <input id="general-enquiry" type="radio" name="queryType" />
-            </li>
-            <li>
-              <label for="support-request">Support Request</label>
-              <input id="support-request" type="radio" name="queryType"/>
-            </li>
-          </ul>
-          <p>Please select a query type</p>
-        </fieldset>
-      </section>
-      <section>
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
-        <p>This field is required</p>
-      </section>
-      <section>
-        <label for="consent-checkbox">I consent to being contacted by the team</label>
-        <input id="consent-checkbox" type="checkbox" name="hasConsent"/>
-      </section>
-      <footer>
-        <button>Submit</button>
-        <p>To submit this form, please consent to being contacted</p>
-      </footer>
-    </form>
-    <article>
-      <header>Message Sent!</header>
-      <section>
-        <p>Thanks for completing the form. We'll be in touch soon!</p>
-      </section>
-    </article>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="src/styles/css/main.css"/>
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="container bg--green-200">
+      <form class="contact-form bg--white" name="contact-form" action="/">
+        <header class="contact-form__header">
+          <h1>Contact Us</h1>
+        </header>
+        <section>
+          <div class="input-group">
+            <label class="input-group__label" for="firstname">First Name</label>
+            <input class="input-group__input" id="firstname" name="firstname" type="text"/>
+            <p class="input-group__error">This field is required</p>
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="firstname">Last Name</label>
+            <input class="input-group__input" id="lastname" name="lastname" type="text" />
+            <p class="input-group__error">This field is required</p>
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="firstname">Email Address</label>
+            <input class="input-group__input" id="email" name="email" type="email" />
+            <p class="input-group__error">
+                Please enter a valid email address
+                This field is required
+            </p>
+          </div>
+        </section>
+        <section>
+          <fieldset class="input-group">
+            <legend class="input-group__legend">Query Type</legend>
+            <ul class="radio-input-list">
+              <li class="radio-input-group">
+                <input id="general-enquiry" type="radio" name="queryType" />
+                <label for="general-inquiry">General Enquiry</label>
+              </li>
+              <li class="radio-input-group">
+                <input id="support-request" type="radio" name="queryType" />
+                <label for="support-request">Support Request</label>
+              </li>
+            </ul>
+            <p>Please select a query type</p>
+          </fieldset>
+        </section>
+        <section>
+          <div class="input-group">
+            <label class="input-group__label" for="message">Message</label>
+            <textarea class="input-group__input input-group__input--textarea" id="message" name="message" rows="4"></textarea>
+            <p class="input-group__error">This field is required</p>
+          </div>
+        </section>
+        <section>
+          <div class="checkbox-input-group">
+            <input class="checkbox-input-group__input" id="consent-checkbox" type="checkbox" name="hasConsent" />
+            <label class="checkbox-input-group__label" for="consent-checkbox">I consent to being contacted by the team</label>
+          </div>
+        </section>
+        <footer class="contact-form__footer">
+          <button class="button button--primary button--full-width">Submit</button>
+          <p>To submit this form, please consent to being contacted</p>
+        </footer>
+      </form>
+      <article>
+        <header>Message Sent!</header>
+        <section>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>

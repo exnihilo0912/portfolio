@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Karla;
+  src: url('../../assets/fonts/Karla-VariableFont_wght.ttf');
+}
 :root {
   --color-green-200: hsl(148, 28%, 91%);
   --color-green-600: hsl(169, 82%, 27%);
@@ -8,8 +12,23 @@
   --text-size-normal: 16px;
   --text-weight-normal: 400;
   --text-weight-bold: 700;
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 2rem;
 }
 
 html {
+  font-family: 'Karla';
   font-size: var(--text-normal);
+  color: var(--color-grey-900);
+}
+
+.bg--{
+  &green-200 {
+    background-color: var(--color-green-200);
+  }
+  &white {
+    background-color: var(--color-white);
+  }
 }
