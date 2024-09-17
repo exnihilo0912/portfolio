@@ -7,18 +7,25 @@
   <link rel="stylesheet" href="src/styles/css/main.css" />
   <title>Frontend Mentor | Blog preview card</title>
 </head>
-<body>
-  <p class="">Learning</p>
-  <p class="text--bold">Learning</p>
-  <p class="text--italic">Learning</p>
-  <p class="text--italic text--bold">Learning</p>
-
-  <p>Published 21 Dec 2023</p>
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
+<body class="bg--yellow">
+  <main class="p-5">
+    <article class="card card--rounded bg--white p-5">
+      <header class="card__header mb-5">
+        <img class="card__image" src="src/assets/images/illustration-article.svg" alt="card image"/>
+      </header>
+      <section class="mb-5">
+        <div class="tag text--small bg--yellow text--bold pt-1 pb-1 pl-2 pr-2 mb-3">Learning</div>
+        <p class="text--small mb-3">Published 21 Dec 2023</p>
+        <p class="text--big text--bold mb-3">HTML & CSS foundations</p>
+        <p class="text--grey-500">
+          These languages are the backbone of every website, defining structure, content, and presentation.
+        </p>
+      </section>
+      <footer class="card__footer">
+        <img class="card__author-picture" src="src/assets/images/image-avatar.webp" alt="author profile picture"/>
+        <p class="text--bold">Greg Hooper</p>
+      </footer>
+    </article>
+  </main>
 </body>
 </html>
