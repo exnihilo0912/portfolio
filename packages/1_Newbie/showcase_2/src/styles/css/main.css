@@ -33,6 +33,10 @@ p {
 .card--rounded {
   border-radius: 20px;
 }
+.card__title:hover {
+  color: var(--color-yellow);
+  cursor: pointer;
+}
 .card__image {
   max-width: 100%;
   width: auto;
