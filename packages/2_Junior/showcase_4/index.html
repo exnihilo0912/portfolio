@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/styles/css/main.css"/>
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main class="container">
+    <form name="contact-form">
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+      <section>
+        <div>
+          <label for="firstname">First Name</label>
+          <input id="firstname" name="firstname" type="text"/>
+          <p>This field is required</p>
+        </div>
+        <div>
+          <label for="firstname">Last Name</label>
+          <input id="lastname" name="lastname" type="text" />
+          <p>This field is required</p>
+        </div>
+        <div>
+          <label for="firstname">Email Address</label>
+          <input id="email" name="email" type="email" />
+          <p>
+              Please enter a valid email address
+              This field is required
+          </p>
+        </div>
+      </section>
+      <section>
+        <fieldset>
+          <legend>Query Type</legend>
+          <ul>
+            <li>
+              <label for="general-inquiry">General Enquiry</label>
+              <input id="general-enquiry" type="radio" name="queryType" />
+            </li>
+            <li>
+              <label for="support-request">Support Request</label>
+              <input id="support-request" type="radio" name="queryType"/>
+            </li>
+          </ul>
+          <p>Please select a query type</p>
+        </fieldset>
+      </section>
+      <section>
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+        <p>This field is required</p>
+      </section>
+      <section>
+        <label for="consent-checkbox">I consent to being contacted by the team</label>
+        <input id="consent-checkbox" type="checkbox" name="hasConsent"/>
+      </section>
+      <footer>
+        <button>Submit</button>
+        <p>To submit this form, please consent to being contacted</p>
+      </footer>
+    </form>
+    <article>
+      <header>Message Sent!</header>
+      <section>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

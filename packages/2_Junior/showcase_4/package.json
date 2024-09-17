@@ -1,0 +1,12 @@
+{
+  "name": "showcase_4",
+  "version": "1.0.0",
+  "description": "![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass src/styles/sass:src/styles/css",
+    "watch": "sass --watch src/styles/sass:src/styles/css"
+  },
+  "author": "Adam EMMANUEL",
+  "license": "ISC"
+}
