@@ -20,6 +20,7 @@ in those cases you can use the static font files for Figtree:
   static/Figtree-Bold.ttf
   static/Figtree-ExtraBold.ttf
   static/Figtree-Black.ttf
+  
   static/Figtree-LightItalic.ttf
   static/Figtree-Italic.ttf
   static/Figtree-MediumItalic.ttf
