@@ -63,9 +63,12 @@
   &__error {
     display: none;
     color: var(--color-red);
-    &.active {
-      display: block;
-    }
+  }
+  &.error &__input {
+    border-color: var(--color-red);
+  }
+  &.error &__error {
+    display: block;
   }
 }
 
@@ -73,6 +76,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-1);
+}
+
+.radio-input-error {
+  display: none;
+  color: var(--color-red);
+  &.active {
+    display: block;
+  }
 }
 
 .radio-input-group {
@@ -96,15 +107,18 @@
 .checkbox-input-group {
   display: flex;
   flex-basis: 100%;
+  flex-wrap: wrap;
   gap: var(--spacing-2);
   align-items: center;
   margin: var(--spacing-4) 0;
   &__input {
     display: block;
+    flex-basis: fit-content;
     height: 2rem;
   }
   &__label {
     height: 2rem;
+    flex: 1;
   }
   &__label::after {
     content: "*";
@@ -112,6 +126,15 @@
     margin-left: var(--spacing-1);
     color: var(--color-green-600);
     margin-bottom: var(--spacing-1);
+  }
+  &__error {
+    display: none;
+    color: var(--color-red);
+
+    &.active {
+      display: block;
+      flex-basis: 100%;
+    }
   }
 }
 
