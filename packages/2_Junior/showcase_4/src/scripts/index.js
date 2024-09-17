@@ -46,7 +46,7 @@ const form = document.querySelector('#contact-form');
     },
     {
       selector: '#general-enquiry',
-      errorSelector: '.radio-input-group',
+      errorSelector: '.input-group',
       validator: isInputValid,
       showError: showInputError,
       hideError: hideInputError,

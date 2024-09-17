@@ -126,14 +126,14 @@ html {
   height: auto;
   line-height: 2rem;
 }
-.input-group__error {
+.input-group__error, .input-group .radio-input-error {
   display: none;
   color: var(--color-red);
 }
 .input-group.error .input-group__input {
   border-color: var(--color-red);
 }
-.input-group.error .input-group__error {
+.input-group.error .input-group__error, .input-group.error .radio-input-error {
   display: block;
 }
 
@@ -192,9 +192,8 @@ html {
   display: none;
   color: var(--color-red);
 }
-.checkbox-input-group__error.active {
+.checkbox-input-group.error .checkbox-input-group__error {
   display: block;
-  flex-basis: 100%;
 }
 
 .button {
