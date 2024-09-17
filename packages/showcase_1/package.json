@@ -1,0 +1,11 @@
+{
+  "name": "showcase_1",
+  "version": "1.0.0",
+  "description": "![Design preview for the Recipe page coding challenge](./preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass src/styles/sass/:src/styles/css/"
+  },
+  "author": "Adam EMMANUEL",
+  "license": "ISC"
+}
