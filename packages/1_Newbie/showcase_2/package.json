@@ -4,7 +4,8 @@
   "description": "![Design preview for the Blog preview card coding challenge](./preview.jpg)",
   "main": "index.html",
   "scripts": {
-    "build": "sass src/styles/scss/:src/styles/css"
+    "build": "sass src/styles/scss/:src/styles/css",
+    "watch": "sass --watch src/styles/scss/:src/styles/css/"
   },
   "author": "Adam EMMANUEL",
   "license": "ISC",
