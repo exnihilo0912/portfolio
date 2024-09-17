@@ -63,10 +63,9 @@
   &__error {
     display: none;
     color: var(--color-red);
-  }
-
-  &__input:invalid + &__error {
-    display: block;
+    &.active {
+      display: block;
+    }
   }
 }
 

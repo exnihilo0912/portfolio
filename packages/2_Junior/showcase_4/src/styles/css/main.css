@@ -130,7 +130,7 @@ html {
   display: none;
   color: var(--color-red);
 }
-.input-group__input:invalid + .input-group__error {
+.input-group__error.active {
   display: block;
 }
 
