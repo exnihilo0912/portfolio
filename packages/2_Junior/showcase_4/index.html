@@ -9,24 +9,44 @@
   </head>
   <body>
     <main class="container bg--green-200">
-      <form class="contact-form bg--white" name="contact-form" action="/">
+      <form
+        id="contact-form"
+        class="contact-form bg--white"
+        name="contact-form"
+        action="/"
+        novalidate
+      >
         <header class="contact-form__header">
           <h1>Contact Us</h1>
         </header>
         <section>
           <div class="input-group">
-            <label class="input-group__label" for="firstname">First Name</label>
-            <input class="input-group__input" id="firstname" name="firstname" type="text"/>
+            <label class="input-group__label" for="firstname">
+              First Name
+            </label>
+            <input
+              class="input-group__input"
+              id="firstname"
+              name="firstname"
+              type="text"
+              required
+            />
             <p class="input-group__error">This field is required</p>
           </div>
           <div class="input-group">
             <label class="input-group__label" for="firstname">Last Name</label>
-            <input class="input-group__input" id="lastname" name="lastname" type="text" />
+            <input
+              class="input-group__input"
+              id="lastname"
+              name="lastname"
+              type="text"
+              required
+            />
             <p class="input-group__error">This field is required</p>
           </div>
           <div class="input-group">
-            <label class="input-group__label" for="firstname">Email Address</label>
-            <input class="input-group__input" id="email" name="email" type="email" />
+            <label class="input-group__label" for="email">Email Address</label>
+            <input class="input-group__input" id="email" name="email" type="email" required />
             <p class="input-group__error">
                 Please enter a valid email address
                 This field is required
@@ -38,7 +58,7 @@
             <legend class="input-group__legend">Query Type</legend>
             <ul class="radio-input-list">
               <li class="radio-input-group">
-                <input id="general-enquiry" type="radio" name="queryType" />
+                <input id="general-enquiry" type="radio" name="queryType" required />
                 <label for="general-inquiry">General Enquiry</label>
               </li>
               <li class="radio-input-group">
@@ -52,13 +72,13 @@
         <section>
           <div class="input-group">
             <label class="input-group__label" for="message">Message</label>
-            <textarea class="input-group__input input-group__input--textarea" id="message" name="message" rows="4"></textarea>
+            <textarea class="input-group__input input-group__input--textarea" id="message" name="message" rows="4" required></textarea>
             <p class="input-group__error">This field is required</p>
           </div>
         </section>
         <section>
           <div class="checkbox-input-group">
-            <input class="checkbox-input-group__input" id="consent-checkbox" type="checkbox" name="hasConsent" />
+            <input class="checkbox-input-group__input" id="consent-checkbox" type="checkbox" name="hasConsent" required />
             <label class="checkbox-input-group__label" for="consent-checkbox">I consent to being contacted by the team</label>
           </div>
         </section>
@@ -74,5 +94,6 @@
         </section>
       </article>
     </main>
+    <script src="src/scripts/index.js"></script>
   </body>
 </html>

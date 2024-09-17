@@ -120,6 +120,7 @@ html {
   border: 1px solid var(--color-grey-500);
   border-radius: 10px;
   height: 2.5rem;
+  padding: var(--spacing-2);
 }
 .input-group__input--textarea {
   height: auto;
