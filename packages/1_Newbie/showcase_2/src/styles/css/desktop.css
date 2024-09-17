@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 384px;
+  flex-basis: 384px;
+}
+
+/*# sourceMappingURL=desktop.css.map */
