@@ -1,0 +1,72 @@
+import './styles/App.css';
+
+import Button from './components/Button';
+import Form from './components/Form';
+
+function App() {
+  return (
+    <main className="App">
+      <Form title="Mortgage Calculator">
+        <Button>Clear All</Button>
+
+        <label>Mortgage Amount</label>
+        <input />
+
+        <label>Mortgage Term</label>
+        <input />
+
+        <label>Interest Rate</label>
+        <input />
+
+        <fieldset>
+          <legend>Mortgage Type</legend>
+          <ul>
+            <li>
+              <input />
+              <label>Repayment</label>
+            </li>
+            <li>
+              <input />
+              <label>Interest Only</label>
+            </li>
+          </ul>
+        </fieldset>
+        <footer>
+          <Button>Calculate Repayments</Button>
+        </footer>
+      </Form>
+      <section>
+        <section>
+          <h3>Results shown here</h3>
+          <p>
+            Complete the form and click “calculate repayments” to see what 
+            your monthly repayments would be.
+          </p>
+        </section>
+        <section>
+          <h3>Your results</h3>
+          <p>
+            Your results are shown below based on the information you provided. 
+            To adjust the results, edit the form and click “calculate repayments” again.
+          </p>
+          <article>
+            <div>
+              <p>Your monthly repayments</p>
+              <output></output>
+            </div>
+            <div>
+              <p>Total you'll repay over the term</p>
+              <output></output>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  );
+}
+
+export default App;
+
+
+
+  
