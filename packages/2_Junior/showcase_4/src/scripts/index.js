@@ -12,7 +12,11 @@ const form = document.querySelector('#contact-form');
   }
   function hideInputError(inputSelector, inputErrorSelector) {
     const classes = document.querySelector(inputSelector).closest(inputErrorSelector).className;
-    document.querySelector(inputSelector).querySelector(inputErrorSelector).className = classes.replace('error', '');
+    if (!classes) {
+      console.log(inputErrorSelector);
+      return;
+    }
+    document.querySelector(inputSelector).closest(inputErrorSelector).className = classes.replace('error', '');
   }
 
   const formInputs = [
@@ -85,4 +89,14 @@ form.addEventListener('submit', function (event) {
   }
 
   const areAllFieldsValid = fieldValidities.every((fieldValidity) => fieldValidity);
+
+  if (areAllFieldsValid) {
+    const toastElement = document.querySelector('.toast');
+    toastElement.className = toastElement.className + ' ' + 'toast--displayed';
+    setTimeout(() => {
+      toastElement.className = toastElement.className.replace('toast--displayed', '');
+    },
+    2000,
+  );
+  }
 });

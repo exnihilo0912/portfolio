@@ -137,6 +137,7 @@
 
   &.error &__error {
     display: block;
+    flex: 2 100%;
   }
 }
 
@@ -164,10 +165,14 @@
   flex-direction: column;
   gap: var(--spacing-3);
   position: relative;
-  top: var(--spacing-1);
+  top: -1000px;
   max-width: 450px;
   margin: 0 auto;
+  transition: top 1s ease-in-out;
 
+  &--displayed {
+    top: var(--spacing-1);
+  }
   &__header {
     display: flex;
     gap: var(--spacing-1);
