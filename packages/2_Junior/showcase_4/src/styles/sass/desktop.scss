@@ -1,0 +1,19 @@
+.contact-form__contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+
+  & .input-group {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  & .input-group:nth-child(3) {
+    flex: 2 100%;
+  }
+}
+
+.radio-input-list.radio-input-list {
+  flex-wrap: nowrap;
+  gap: var(--spacing-2);
+}

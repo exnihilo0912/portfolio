@@ -11,6 +11,8 @@
 .contact-form {
   border-radius: 10px;
   padding: var(--spacing-2);
+  max-width: 700px;
+  margin: 0 auto;
 
   &__header {
     margin-bottom: var(--spacing-3);
@@ -100,9 +102,6 @@
   &__label {
     flex: 1;
   }
-
-  &__input {
-  }
 }
 
 .checkbox-input-group {
@@ -112,6 +111,7 @@
   gap: var(--spacing-2);
   align-items: center;
   margin: var(--spacing-4) 0;
+
   &__input {
     display: block;
     flex-basis: fit-content;
@@ -120,6 +120,8 @@
   &__label {
     height: 2rem;
     flex: 1;
+    display: flex;
+    align-items: center;
   }
   &__label::after {
     content: "*";
@@ -150,5 +152,24 @@
   &--primary {
     color: var(--color-white);
     background-color: var(--color-green-600);
+  }
+}
+
+.toast {
+  background-color: var(--color-grey-900);
+  color: var(--color-white);
+  padding: var(--spacing-3);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  position: relative;
+  top: var(--spacing-1);
+  max-width: 450px;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    gap: var(--spacing-1);
   }
 }

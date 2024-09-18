@@ -82,6 +82,8 @@ html {
 .contact-form {
   border-radius: 10px;
   padding: var(--spacing-2);
+  max-width: 700px;
+  margin: 0 auto;
 }
 .contact-form__header {
   margin-bottom: var(--spacing-3);
@@ -164,6 +166,7 @@ html {
 .radio-input-group__label {
   flex: 1;
 }
+
 .checkbox-input-group {
   display: flex;
   flex-basis: 100%;
@@ -180,6 +183,8 @@ html {
 .checkbox-input-group__label {
   height: 2rem;
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 .checkbox-input-group__label::after {
   content: "*";
@@ -207,6 +212,24 @@ html {
 .button--primary {
   color: var(--color-white);
   background-color: var(--color-green-600);
+}
+
+.toast {
+  background-color: var(--color-grey-900);
+  color: var(--color-white);
+  padding: var(--spacing-3);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  position: relative;
+  top: var(--spacing-1);
+  max-width: 450px;
+  margin: 0 auto;
+}
+.toast__header {
+  display: flex;
+  gap: var(--spacing-1);
 }
 
 /*# sourceMappingURL=main.css.map */

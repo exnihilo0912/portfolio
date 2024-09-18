@@ -84,39 +84,5 @@ form.addEventListener('submit', function (event) {
     }
   }
 
-  // const generalEnquiryInput = document.querySelector('#general-enquiry');
-  // const isGeneralInquiry =  generalEnquiryInput.checked;
-  // const supportRequestInput = document.querySelector('#support-request');
-  // const isSupportRequest =  supportRequestInput.checked;
-  // const requestTypeClasses = document.querySelector('.radio-input-list + p').className;
-  // fieldValidities.push(generalEnquiryInput.validity.valid);
-  // if (!generalEnquiryInput.validity.valid) {
-  //   document.querySelector('.radio-input-list + p').className = requestTypeClasses + ' ' + 'active';
-  // } else  {
-  //   document.querySelector('.radio-input-list + p').className = requestTypeClasses.replace('active', '');
-  // }
-
-  // const hasConsentInput = document.querySelector('#consent-checkbox');
-  // const hasConsent = hasConsentInput.checked;
-  // const haConsentClasses = document.querySelector('#consent-checkbox ~ p').className;
-  // fieldValidities.push(hasConsentInput.validity.valid);
-  //   if (!hasConsentInput.validity.valid) {
-  //   document.querySelector('#consent-checkbox ~ p').className = haConsentClasses + ' ' + 'active';
-  // } else  {
-  //   document.querySelector('#consent-checkbox ~ p').className = haConsentClasses.replace('active', '');
-  // }
-
   const areAllFieldsValid = fieldValidities.every((fieldValidity) => fieldValidity);
-  console.log({ areAllFieldsValid });
-  // console.log({
-  //   firstname: { value: firstname, isValid: firstnameInput.validity.valid },
-  //   lastname: { value: lastname, isValid: lastnameInput.validity.valid },
-  //   email: { value: email, isValid: emailInput.validity.valid },
-  //   isGeneralInquiry: { value: isGeneralInquiry, isValid: generalEnquiryInput.validity.valid },
-  //   isSupportRequest: { value: isSupportRequest, isValid: supportRequestInput.validity.valid },
-  //   message: { value: message, isValid: messageInput.validity.valid },
-  //   hasConsent: { value: hasConsent, isValid: hasConsentInput.validity.valid },
-  // });
-
-  // alert('Form sent');
 });
