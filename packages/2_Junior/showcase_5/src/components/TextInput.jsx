@@ -1,41 +1,23 @@
 import styled from "styled-components";
 
-const StyledTextInputGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+const StyledLabel = styled(Label)`
+  color: ${({ theme }) => theme.colors.neutralSlate700}
 `;
-
 function Label({ children, ...props }) {
   return (
     <label {...props} >{children}</label>
   );
 }
-const StyledLabel = styled(Label)`
-  color: ${({ theme }) => theme.colors.neutralSlate700}
-`;
 
 const StyledInputContainer = styled.div`
   display: flex;
   height: 2rem;
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.neutralSlate300};
-  width: fit-content;
+  width: 100%;
 `;
-const StyledInput = styled.input`
-  border: none;
-  max-height: 100%;
-  line-height: 100%;
-  outline: none;
-  padding-left: 0.5rem;
-`;
-const StyledInputPrefix = styled.div`
-  width: 2rem;
-  background: ${({ theme }) => theme.colors.neutralSlate100};
-  color:  ${({ theme }) => theme.colors.neutralSlate300};
-`;
-const StyledInputSuffix = styled.div`
-  width: 2rem;
+const StyledInputExtremity = styled.div`
+  padding: 0.5rem;
   background: ${({ theme }) => theme.colors.neutralSlate100};
   color:  ${({ theme }) => theme.colors.neutralSlate900};
   display: flex;
@@ -43,23 +25,45 @@ const StyledInputSuffix = styled.div`
   align-items: center;
   font-weight: ${({ theme }) => theme.font.text.weight.bold};
 `;
+const StyledInput = styled.input`
+  flex: 1;
+  border: none;
+  max-height: 100%;
+  line-height: 2rem;
+  outline: none;
+  padding: 0 1rem;
+  color:  ${({ theme }) => theme.colors.neutralSlate900};
+  font-weight: ${({ theme }) => theme.font.text.weight.bold};
+`;
 function Input(props) {
   const { prefixText, suffixText, ...nativeProps } = props;
   return (
     <StyledInputContainer>
-      {prefixText && (<StyledInputPrefix>{prefixText}</StyledInputPrefix>)}
+      {prefixText && (<StyledInputExtremity>{prefixText}</StyledInputExtremity>)}
       <StyledInput {...nativeProps} />
-      {suffixText && (<StyledInputSuffix>{suffixText}</StyledInputSuffix>)}
+      {suffixText && (<StyledInputExtremity>{suffixText}</StyledInputExtremity>)}
     </StyledInputContainer>
   );
 }
 
+const StyledTextInputGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
 function TextInput(props) {
-  const { label } = props;
+  const {
+    id,
+    label,
+    name,
+    ...styleProps
+  } = props;
+
   return (
-    <StyledTextInputGroup {...props}>
-      <StyledLabel>{label}</StyledLabel>
-      <Input {...props} />
+    <StyledTextInputGroup {...styleProps}>
+      <StyledLabel for={id}>{label}</StyledLabel>
+      <Input id={id} name={id || name} {...styleProps} />
     </StyledTextInputGroup>
   );
 }

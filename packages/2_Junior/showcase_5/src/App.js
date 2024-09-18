@@ -14,13 +14,23 @@ function App(props) {
       <Form title="Mortgage Calculator">
         <Button type="link">Clear All</Button>
 
-        <TextInput label="Mortgage Amount" suffixText="%"/>
-        toto
-        <label>Mortgage Term</label>
-        <input />
+        <TextInput
+          id="mortgage-amount"
+          label="Mortgage Amount"
+          prefixText="£"
+        />
 
-        <label>Interest Rate</label>
-        <input />
+        <TextInput
+          id="mortgage-term"
+          label="Mortgage Term"
+          suffixText="years"
+        />
+
+        <TextInput
+          id="interest-rate"
+          label="Interest Rate"
+          suffixText="%"
+        />
 
         <fieldset>
           <legend>Mortgage Type</legend>
