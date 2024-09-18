@@ -103,12 +103,19 @@ form.addEventListener('submit', function (event) {
   const areAllFieldsValid = fieldValidities.every((fieldValidity) => fieldValidity);
 
   if (areAllFieldsValid) {
+    form.reset();
+    for ( const radioElement of radioElements) {
+      const container = radioElement.closest('.radio-input-group');
+      container.className = container.className.replace('checked', '')
+    }
     const toastElement = document.querySelector('.toast');
     toastElement.className = toastElement.className + ' ' + 'toast--displayed';
-    setTimeout(() => {
-      toastElement.className = toastElement.className.replace('toast--displayed', '');
-    },
-    2000,
-  );
+    setTimeout(
+      () => {
+        toastElement.className = toastElement.className.replace('toast--displayed', '');
+      },
+      2000,
+    );
+
   }
 });
