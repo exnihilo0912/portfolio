@@ -1,13 +1,17 @@
-import './styles/App.css';
+import styled from "styled-components";
 
 import Button from './components/Button';
 import Form from './components/Form';
 
-function App() {
+const StyledApp = styled(App)`
+  padding: 1rem;
+`;
+
+function App(props) {
   return (
-    <main className="App">
+    <main {...props}>
       <Form title="Mortgage Calculator">
-        <Button>Clear All</Button>
+        <Button type="link">Clear All</Button>
 
         <label>Mortgage Amount</label>
         <input />
@@ -65,8 +69,4 @@ function App() {
   );
 }
 
-export default App;
-
-
-
-  
+export default StyledApp;
