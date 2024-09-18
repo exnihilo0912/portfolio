@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-input {
+input, textarea {
   outline: none;
   border: none;
   margin: 0;
@@ -128,7 +128,7 @@ html {
   height: auto;
   line-height: 2rem;
 }
-.input-group__input:focus {
+.input-group__input:focus, .input-group__input:hover {
   border-color: var(--color-green-600);
 }
 .input-group__error, .input-group .radio-input-error {
@@ -220,6 +220,9 @@ html {
 .button--primary {
   color: var(--color-white);
   background-color: var(--color-green-600);
+}
+.button--primary:hover {
+  background-color: var(--color-grey-900);
 }
 
 .toast {

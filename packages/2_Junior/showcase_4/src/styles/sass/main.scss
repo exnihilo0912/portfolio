@@ -60,7 +60,7 @@
       height: auto;
       line-height: 2rem;
     }
-    &:focus {
+    &:focus, &:hover {
       border-color: var(--color-green-600);
     }
   }
@@ -160,6 +160,10 @@
   &--primary {
     color: var(--color-white);
     background-color: var(--color-green-600);
+
+    &:hover {
+      background-color: var(--color-grey-900);
+    }
   }
 }
 
