@@ -4,6 +4,10 @@ const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  & h2 {
+    color: ${({ theme }) => theme.colors.neutralSlate900};
+  }
 `;
 
 function Form({ children, title, ...styleProps }) {

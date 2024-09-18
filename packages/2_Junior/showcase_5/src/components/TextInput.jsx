@@ -19,7 +19,7 @@ const StyledInputContainer = styled.div`
 const StyledInputExtremity = styled.div`
   padding: 0.5rem;
   background: ${({ theme }) => theme.colors.neutralSlate100};
-  color:  ${({ theme }) => theme.colors.neutralSlate900};
+  color:  ${({ theme }) => theme.colors.neutralSlate700};
   display: flex;
   justify-content: center;
   align-items: center;
