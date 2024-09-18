@@ -3,14 +3,16 @@
   box-sizing: border-box;
 }
 
-html, body {
-  min-height: 100%;
+html,
+body {
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -21,12 +23,18 @@ p {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
   border: none;
   margin: 0;
