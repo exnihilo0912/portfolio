@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Button from './components/Button';
 import Form from './components/Form';
+import TextInput from "./components/TextInput";
 
 const StyledApp = styled(App)`
   padding: 1rem;
@@ -13,9 +14,8 @@ function App(props) {
       <Form title="Mortgage Calculator">
         <Button type="link">Clear All</Button>
 
-        <label>Mortgage Amount</label>
-        <input />
-
+        <TextInput label="Mortgage Amount" suffixText="%"/>
+        toto
         <label>Mortgage Term</label>
         <input />
 

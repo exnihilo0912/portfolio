@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const ButtonContainer = styled.button`
-  display: 'flex';
-  align-items: 'center';
+  display: flex;
+  align-items: center;
   border: none;
   background-color: ${({ theme, type }) => (
     type === 'link'
