@@ -60,6 +60,9 @@
       height: auto;
       line-height: 2rem;
     }
+    &:focus {
+      border-color: var(--color-green-600);
+    }
   }
 
   &__error, & .radio-input-error {
@@ -99,6 +102,10 @@
   height: 2.5rem;
   padding: var(--spacing-1) var(--spacing-3);
 
+  &.checked {
+    background-color: var(--color-green-200);
+    border-color: var(--color-green-600);
+  }
   &__label {
     flex: 1;
   }

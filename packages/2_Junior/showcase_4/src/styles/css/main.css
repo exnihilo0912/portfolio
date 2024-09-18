@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input {
-  inset: none;
+  outline: none;
   border: none;
   margin: 0;
   padding: 0;
@@ -128,6 +128,9 @@ html {
   height: auto;
   line-height: 2rem;
 }
+.input-group__input:focus {
+  border-color: var(--color-green-600);
+}
 .input-group__error, .input-group .radio-input-error {
   display: none;
   color: var(--color-red);
@@ -162,6 +165,10 @@ html {
   border-radius: 10px;
   height: 2.5rem;
   padding: var(--spacing-1) var(--spacing-3);
+}
+.radio-input-group.checked {
+  background-color: var(--color-green-200);
+  border-color: var(--color-green-600);
 }
 .radio-input-group__label {
   flex: 1;

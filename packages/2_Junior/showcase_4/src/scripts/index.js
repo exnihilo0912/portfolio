@@ -64,6 +64,18 @@ const form = document.querySelector('#contact-form');
     }
   ];
 
+const radioElements = document.querySelectorAll('input[type="radio"');
+for (const radioElement of radioElements) {
+  radioElement.addEventListener('change', function (event) {
+    for( const radioElement of radioElements) {
+      const container = radioElement.closest('.radio-input-group');
+      radioElement === this
+        ? container.className = `${container.className} checked`
+        : container.className = container.className.replace('checked', '')
+    }
+  })
+}
+
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   const fieldValidities = [];
