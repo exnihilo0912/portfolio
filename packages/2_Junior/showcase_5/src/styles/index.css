@@ -1,6 +1,9 @@
 /* weight from 200 to 800 */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+* {
+  font-size: 16px;
+}
 /* Normalize */
 html, body {
   padding: 0;
@@ -11,10 +14,6 @@ html, body {
   font-family: 'Plus Jakarta Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-input {
-  font-size: 16px;
 }
 
 ul, li {

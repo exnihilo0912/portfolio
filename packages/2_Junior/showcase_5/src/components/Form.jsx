@@ -4,6 +4,7 @@ const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: start;
 
   & h2 {
     color: ${({ theme }) => theme.colors.neutralSlate900};

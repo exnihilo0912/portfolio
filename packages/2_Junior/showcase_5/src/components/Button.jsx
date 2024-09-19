@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 const ButtonContainer = styled.button`
   display: flex;
+  height: ${({ theme, type }) => (
+    type === 'link'
+      ? 'auto'
+      : '3rem'
+  )};;
   align-items: center;
+  justify-content: center;
   border: none;
   background-color: ${({ theme, type }) => (
     type === 'link'
@@ -18,7 +24,7 @@ const ButtonContainer = styled.button`
   padding: ${({ type }) => (
     type === 'link'
     ? '0'
-    : '0.5rem 1rem'
+    : '1rem 2rem'
   )};
   font-weight: ${({ theme, type }) => (
     type === 'link'
@@ -30,6 +36,7 @@ const ButtonContainer = styled.button`
       ? `${theme.colors.neutralSlate700} underline`
       : ''
   )};
+  width: ${({ $fullWidth }) => $fullWidth ? '100%' : 'auto'};
 `;
 
 export default function Button({ children, ...props }) {
@@ -37,7 +44,7 @@ export default function Button({ children, ...props }) {
 
   return (
     <ButtonContainer {...props}>
-      {type === 'link' ? 'link' : children}
+      {children}
     </ButtonContainer>
   );
 }

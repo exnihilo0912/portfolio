@@ -57,13 +57,25 @@ function TextInput(props) {
     id,
     label,
     name,
+    onChange,
+    value,
+    prefixText,
+    suffixText,
     ...styleProps
   } = props;
 
   return (
     <StyledTextInputGroup {...styleProps}>
-      <StyledLabel for={id}>{label}</StyledLabel>
-      <Input id={id} name={id || name} {...styleProps} />
+      <StyledLabel htmlFor={id}>{label}</StyledLabel>
+      <Input
+        id={id}
+        name={id || name}
+        onChange={onChange}
+        value={value}
+        prefixText={prefixText}
+        suffixText={suffixText}
+        {...styleProps}
+      />
     </StyledTextInputGroup>
   );
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 import Button from './components/Button';
@@ -9,29 +10,44 @@ const StyledApp = styled(App)`
 `;
 
 function App(props) {
+  const [formData, setFormData] = useState({
+    mortgageAmount: '',
+    mortgageTerm: '',
+    interestRate: '',
+    mortgageType: '',
+  });
+  const onMortgaeAmountChangeHandler = (event) => {
+    setFormData((previousState) => ({
+      ...previousState,
+      mortgageAmount: event.target.value
+    }));
+  };
   return (
     <main {...props}>
       <Form title="Mortgage Calculator">
         <Button type="link">Clear All</Button>
+        <section>
+          <TextInput
+            id="mortgage-amount"
+            label="Mortgage Amount"
+            prefixText="£"
+            value={formData.mortgageAmount}
+            onChange={onMortgaeAmountChangeHandler}
+          />
+          <output>{formData.mortgageAmount}</output>
 
-        <TextInput
-          id="mortgage-amount"
-          label="Mortgage Amount"
-          prefixText="£"
-        />
+          <TextInput
+            id="mortgage-term"
+            label="Mortgage Term"
+            suffixText="years"
+          />
 
-        <TextInput
-          id="mortgage-term"
-          label="Mortgage Term"
-          suffixText="years"
-        />
-
-        <TextInput
-          id="interest-rate"
-          label="Interest Rate"
-          suffixText="%"
-        />
-
+          <TextInput
+            id="interest-rate"
+            label="Interest Rate"
+            suffixText="%"
+          />
+        </section>
         <fieldset>
           <legend>Mortgage Type</legend>
           <ul>
@@ -46,7 +62,7 @@ function App(props) {
           </ul>
         </fieldset>
         <footer>
-          <Button>Calculate Repayments</Button>
+          <Button $fullWidth>Calculate Repayments</Button>
         </footer>
       </Form>
       <section>
