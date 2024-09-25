@@ -1,43 +1,123 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useSyncExternalStore, useState } from 'react';
 
 import List from './components/List';
 
 // https://pokeapi.co/api/v2/pokemon/ditto
-const pokeApiRootURL = 'https://pokeapi.co/api/v2/';
+const pokeApiRootURL = 'https://pokeapi.co/api/v2';
 const pokemonURL = `${pokeApiRootURL}/pokemon`;
-const pokemonListURL = `${pokeApiRootURL}/pokemon?limit=151&offset=0`
+const pokemonListURL = `${pokemonURL}?limit=151&offset=0`
+
+async function fetchPokemonById(id) {
+  const result = await fetch(`${pokemonURL}/${id}`);
+  const pokemon = await result.json();
+  return pokemon;
+}
 
 function App() {
-  const [pokemons, setPokemons] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState(null);
-
   useEffect(() => {
     async function getPokemons() {
       const response = await fetch(pokemonListURL);
       const { results } = await response.json();
-      setPokemons(results);
+      setPokemons(results.map((pokemon, index) => ({ id: index + 1, ...pokemon })));
     }
-
     getPokemons();
   }, []);
+  // TODO put into hook
+  const [pokemons, setPokemons] = useState([]);
+  const [selectedPokemonId, setSelectedPokemonId] = useState(null);
+  const [currentPokemon, setCurrentPokemon] = useState(null);
+// -----
+
+  const selectedPokemon = pokemons.find(({ id }) => Number(selectedPokemonId) === id);
+
+  useEffect(() => {
+    let ignore = false;
+
+    async function startFetching() {
+      const pokemon = await fetchPokemonById(selectedPokemonId);
+      if (!ignore) {
+        setCurrentPokemon(pokemon);
+      }
+    }
+
+    if (selectedPokemonId) {
+      startFetching();
+    }
+
+    return () => {
+      ignore = true;
+    };
+  }, [selectedPokemonId]);
 
 
   return (
-    <main>
+    <main className='page'>
       <h1>Pokedex</h1>
-      <section>
-        <p>Selected pokemon</p>
-        <article>
-          {selectedPokemon}
+      <section className="container container--centered">
+        <select
+          placeholder="Select a pokemon"
+          onChange={(event) => setSelectedPokemonId(event.target.value)}
+        >
+          {pokemons.map(
+            (pokemon, index) => (
+              <option
+                key={pokemon.id}
+                value={pokemon.id}
+                checked={selectedPokemonId === pokemon.id}
+              >
+                {pokemon.name}
+              </option>
+            )
+          )}
+        </select>
+      </section>
+      <section className="container container--column container--centered">
+        <h2>Selected Pokemon</h2>
+        <article className='card card--rounded'>
+          <header className='card__header'>{selectedPokemon?.name}</header>
+          <div>
+            <img src={currentPokemon.sprites.front_default} />
+          </div>
+          <div className='card__content'>
+            <div>
+              <List className="list list--horizontal">
+                {
+                  currentPokemon?.types
+                    .toSorted(({ slot: a }, { slot: b }) => a > b)
+                    .map(({ type, slot }) => (
+                      <li key={slot}>
+                        <div className="tag">{type.name}</div>
+                      </li>
+                    ))
+                }
+              </List>
+            </div>
+            <div>
+              <List>
+                <li key="height">height: {parseInt(currentPokemon.height, 10) * 10} cm</li>
+                <li key="weight">weight: {parseInt(currentPokemon.weight, 10) / 10} kg</li>
+              </List>
+            </div>
+            <div>
+              {
+                selectedPokemon
+                  ? (
+                    <List>
+                      {currentPokemon?.stats.map(({ stat, base_stat, effort }) => (
+                        <li key={stat.name}>
+                          <p>{stat.name}: {base_stat}</p>
+                        </li>
+                      ))}
+                    </List>
+                  )
+                  : (<p>No pokemon selected</p>)
+              }
+            </div>
+          </div>
+          <footer className='card__footer'>{selectedPokemon ? 'footer' : ''}</footer>
         </article>
       </section>
-      <section>
-        <article>
-          <List>
-            {pokemons.map(({ name }) => (<li key={name}>{name}</li>))}
-          </List>
-        </article>
-      </section>
+
     </main>
   );
 }
