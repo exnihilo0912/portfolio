@@ -15,6 +15,7 @@ const StyledInputContainer = styled.div`
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.neutralSlate300};
   width: 100%;
+  overflow: hidden;
 `;
 const StyledInputExtremity = styled.div`
   padding: 0.5rem;
