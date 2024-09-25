@@ -4,8 +4,10 @@
 * {
   font-size: 16px;
 }
+
 /* Normalize */
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   min-height: 100%;
@@ -16,7 +18,8 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -32,4 +35,49 @@ code {
     monospace;
 }
 
+/* Theme */
+
+:root {
+  --primary-green: hsl(61, 70%, 52%);
+  --primary-ted: hsl(4, 69%, 50%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-slate-100: hsl(202, 86%, 94%);
+  --neutral-slate-300: hsl(203, 41%, 72%);
+  --neutral-slate-500: hsl(200, 26%, 54%);
+  --neutral-slate-700: hsl(200, 24%, 40%);
+  --neutral-slate-900: hsl(202, 55%, 16%);
+}
+
 /*  */
+
+.button {
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.button--primary {
+  color: var(--slate-900);
+  background-color: var(--primary-green);
+}
+
+.button--rounded {
+  border-radius: 45px;
+}
+
+.button--full-width {
+  width: 100%;
+}
+
+.button--link {
+  height: auto;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: underline;
+  color: var(--neutral-slate-700);
+  background-color: transparent;
+}

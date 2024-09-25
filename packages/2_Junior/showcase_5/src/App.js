@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-import Button from './components/Button';
+import CssButton from './components/CssButton';
 import Form from './components/Form';
 import TextInput from "./components/TextInput";
 
@@ -25,7 +25,7 @@ function App(props) {
   return (
     <main {...props}>
       <Form title="Mortgage Calculator">
-        <Button type="link">Clear All</Button>
+        <CssButton className="button button--link">Clear all</CssButton>
         <section>
           <TextInput
             id="mortgage-amount"
@@ -62,7 +62,7 @@ function App(props) {
           </ul>
         </fieldset>
         <footer>
-          <Button $fullWidth>Calculate Repayments</Button>
+          <CssButton className="button button--primary button--rounded">Calculate Repayments</CssButton>
         </footer>
       </Form>
       <section>
