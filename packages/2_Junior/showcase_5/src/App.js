@@ -4,6 +4,7 @@ import styled from "styled-components";
 import CssButton from './components/CssButton';
 import Form from './components/Form';
 import TextInput from "./components/TextInput";
+import RadioInputCollection from './components/RadioInputCollection';
 
 const StyledApp = styled(App)`
   padding: 1rem;
@@ -16,15 +17,40 @@ function App(props) {
     interestRate: '',
     mortgageType: '',
   });
-  const onMortgaeAmountChangeHandler = (event) => {
+  const handleMortgageAmountChange = (event) => {
     setFormData((previousState) => ({
       ...previousState,
       mortgageAmount: event.target.value
     }));
   };
+  const handleMortgageTermChange = (event) => {
+    setFormData((previousState) => ({
+      ...previousState,
+      mortgageTerm: event.target.value
+    }));
+  };
+  const handleMortgageRateChange = (event) => {
+    setFormData((previousState) => ({
+      ...previousState,
+      interestRate: event.target.value
+    }));
+  };
+  const handleMortgageTypeChange = (event) => {
+    console.log({ event , value: event.target.value });
+
+    setFormData((previousState) => ({
+      ...previousState,
+      mortgageType: event.target.value,
+    }));
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log({ formData });
+  };
+
   return (
     <main {...props}>
-      <Form title="Mortgage Calculator">
+      <Form title="Mortgage Calculator" onSubmit={handleSubmit}>
         <CssButton className="button button--link">Clear all</CssButton>
         <section>
           <TextInput
@@ -32,37 +58,39 @@ function App(props) {
             label="Mortgage Amount"
             prefixText="£"
             value={formData.mortgageAmount}
-            onChange={onMortgaeAmountChangeHandler}
+            onChange={handleMortgageAmountChange}
           />
-          <output>{formData.mortgageAmount}</output>
-
           <TextInput
             id="mortgage-term"
             label="Mortgage Term"
             suffixText="years"
+            value={formData.mortgageTerm}
+            onChange={handleMortgageTermChange}
           />
 
           <TextInput
             id="interest-rate"
             label="Interest Rate"
             suffixText="%"
+            value={formData.interestRate}
+            onChange={handleMortgageRateChange}
           />
         </section>
-        <fieldset>
-          <legend>Mortgage Type</legend>
-          <ul>
-            <li>
-              <input />
-              <label>Repayment</label>
-            </li>
-            <li>
-              <input />
-              <label>Interest Only</label>
-            </li>
-          </ul>
-        </fieldset>
+        <RadioInputCollection
+          radios={[
+           { label: 'Repayment', id: 'repayment', value: 'repayment' },
+            { label: 'Interest Only', id: 'interest-only', value: 'interest' },
+          ]}
+          name="mortgage-type"
+          onChange={handleMortgageTypeChange}
+        />
         <footer>
-          <CssButton className="button button--primary button--rounded">Calculate Repayments</CssButton>
+          <CssButton
+            className="button button--primary button--rounded"
+            type="submit"
+          >
+            Calculate Repayments
+          </CssButton>
         </footer>
       </Form>
       <section>

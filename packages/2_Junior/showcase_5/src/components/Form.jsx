@@ -11,9 +11,9 @@ const StyledForm = styled(Form)`
   }
 `;
 
-function Form({ children, title, ...styleProps }) {
+function Form({ children, title, onSubmit, ...styleProps }) {
   return (
-    <form {...styleProps}>
+    <form onSubmit={onSubmit} {...styleProps}>
       <h2>{title}</h2>
       {children}
     </form>
