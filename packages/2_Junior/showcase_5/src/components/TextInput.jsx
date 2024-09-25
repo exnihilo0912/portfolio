@@ -11,14 +11,14 @@ function Label({ children, ...props }) {
 
 const StyledInputContainer = styled.div`
   display: flex;
-  height: 2rem;
+  height: 3rem;
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.neutralSlate300};
   width: 100%;
   overflow: hidden;
 `;
 const StyledInputExtremity = styled.div`
-  padding: 0.5rem;
+  padding: 1rem;
   background: ${({ theme }) => theme.colors.neutralSlate100};
   color:  ${({ theme }) => theme.colors.neutralSlate700};
   display: flex;
@@ -30,7 +30,7 @@ const StyledInput = styled.input`
   flex: 1;
   border: none;
   max-height: 100%;
-  line-height: 2rem;
+  line-height: 3rem;
   outline: none;
   padding: 0 1rem;
   color:  ${({ theme }) => theme.colors.neutralSlate900};

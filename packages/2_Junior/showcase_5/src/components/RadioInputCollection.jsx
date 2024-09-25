@@ -11,22 +11,24 @@ function RadioInputCollection(props, ref) {
   } = props;
 
   const radioElements = radios.map((radio) => (
-    <li key={radio.id}>
-      <input
-        name={name}
-        type="radio"
-        value={radio.value}
-        onChange={onChange}
-        id={radio.id}
-      />
-      <label htmlFor={radio.id}>{radio.label}</label>
+    <li className="radio-group__item" key={radio.id}>
+      <div className="radio-input-group">
+        <input
+          name={name}
+          type="radio"
+          value={radio.value}
+          onChange={onChange}
+          id={radio.id}
+        />
+        <label htmlFor={radio.id}>{radio.label}</label>
+      </div>
     </li>
   ));
 
   return (
-    <fieldset>
+    <fieldset className='radio-group'>
       <legend></legend>
-      <ul>
+      <ul className="radio-group__container">
         {radioElements}
       </ul>
     </fieldset>
