@@ -1,5 +1,6 @@
 import { useEffect, useSyncExternalStore, useState } from 'react';
 
+import Card from './components/Card';
 import List from './components/List';
 
 // https://pokeapi.co/api/v2/pokemon/ditto
@@ -73,49 +74,63 @@ function App() {
       </section>
       <section className="container container--column container--centered">
         <h2>Selected Pokemon</h2>
-        <article className='card card--rounded'>
-          <header className='card__header'>{selectedPokemon?.name}</header>
-          <div>
-            <img src={currentPokemon.sprites.front_default} />
-          </div>
-          <div className='card__content'>
-            <div>
-              <List className="list list--horizontal">
+        <Card
+          className="card--rounded"
+          headerText={selectedPokemon?.name}
+          renderContent={() => (
+            <>
+              <div>
                 {
-                  currentPokemon?.types
-                    .toSorted(({ slot: a }, { slot: b }) => a > b)
-                    .map(({ type, slot }) => (
-                      <li key={slot}>
-                        <div className="tag">{type.name}</div>
-                      </li>
-                    ))
+                  currentPokemon
+                    ? (<img
+                        className="sprite" src={currentPokemon?.sprites.front_default}
+                        alt="pokemon sprite"
+                      />)
+                    : <div className='sprite-placeholder'></div>
                 }
-              </List>
-            </div>
-            <div>
-              <List>
-                <li key="height">height: {parseInt(currentPokemon.height, 10) * 10} cm</li>
-                <li key="weight">weight: {parseInt(currentPokemon.weight, 10) / 10} kg</li>
-              </List>
-            </div>
-            <div>
-              {
-                selectedPokemon
-                  ? (
-                    <List>
-                      {currentPokemon?.stats.map(({ stat, base_stat, effort }) => (
-                        <li key={stat.name}>
-                          <p>{stat.name}: {base_stat}</p>
+              </div>
+              <div>
+                <List className="list list--horizontal">
+                  {
+                    currentPokemon?.types
+                      .toSorted(({ slot: a }, { slot: b }) => a > b)
+                      .map(({ type, slot }) => (
+                        <li key={slot}>
+                          <div className="tag">{type.name}</div>
                         </li>
-                      ))}
+                      ))
+                  }
+                </List>
+              </div>
+              <div>
+                {
+                  currentPokemon
+                  && (
+                    <List>
+                      <li key="height">height: {parseInt(currentPokemon.height, 10) * 10} cm</li>
+                      <li key="weight">weight: {parseInt(currentPokemon.weight, 10) / 10} kg</li>
                     </List>
                   )
-                  : (<p>No pokemon selected</p>)
-              }
-            </div>
-          </div>
-          <footer className='card__footer'>{selectedPokemon ? 'footer' : ''}</footer>
-        </article>
+                }
+              </div>
+              <div>
+                {
+                  selectedPokemon
+                    ? (
+                      <List>
+                        {currentPokemon?.stats.map(({ stat, base_stat, effort }) => (
+                          <li key={stat.name}>
+                            <p>{stat.name}: {base_stat}</p>
+                          </li>
+                        ))}
+                      </List>
+                    )
+                    : (<p>No pokemon selected</p>)
+                }
+              </div>
+            </>
+          )}
+        />
       </section>
 
     </main>

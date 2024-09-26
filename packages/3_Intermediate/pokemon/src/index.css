@@ -87,3 +87,15 @@ li {
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 5px;
 }
+
+.sprite {
+  height: 6rem;
+  width: 6rem;
+}
+
+.sprite-placeholder {
+  height: 6rem;
+  width: 6rem;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 10px;
+}
