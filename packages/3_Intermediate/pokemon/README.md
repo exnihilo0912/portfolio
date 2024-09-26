@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Design
+
+[Design Idea #1 + case study](https://www.behance.net/gallery/158115601/Pokedex-App-Case-Study)
+[Design Idea #2-A](https://dribbble.com/shots/6545819-Pokedex-App)
+[Design Idea #2-B](https://dribbble.com/shots/6563578-Pokedex-App-Animation)
+[Design Idea #3 + figma](https://www.figma.com/community/file/1202971127473077147)
