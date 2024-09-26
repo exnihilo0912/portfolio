@@ -14,7 +14,7 @@ async function fetchPokemonById(id) {
   return pokemon;
 }
 
-function App() {
+function usePokemonList() {
   useEffect(() => {
     async function getPokemons() {
       const response = await fetch(pokemonListURL);
@@ -25,12 +25,11 @@ function App() {
   }, []);
   // TODO put into hook
   const [pokemons, setPokemons] = useState([]);
-  const [selectedPokemonId, setSelectedPokemonId] = useState(null);
-  const [currentPokemon, setCurrentPokemon] = useState(null);
-// -----
 
-  const selectedPokemon = pokemons.find(({ id }) => Number(selectedPokemonId) === id);
+  return pokemons;
+}
 
+function usePokemon(selectedPokemonId) {
   useEffect(() => {
     let ignore = false;
 
@@ -49,7 +48,16 @@ function App() {
       ignore = true;
     };
   }, [selectedPokemonId]);
+  const [currentPokemon, setCurrentPokemon] = useState(null);
 
+  return currentPokemon;
+}
+
+function App() {
+  const pokemons = usePokemonList();
+  const [selectedPokemonId, setSelectedPokemonId] = useState(null);
+  const currentPokemon = usePokemon(selectedPokemonId);
+  const selectedPokemon = pokemons.find(({ id }) => Number(selectedPokemonId) === id);
 
   return (
     <main className='page'>
