@@ -4,7 +4,6 @@ import { useLoaderData } from 'react-router-dom';
 import Card from '../components/Card';
 import List from '../components/List';
 
-// https://pokeapi.co/api/v2/pokemon/ditto
 const pokeApiRootURL = 'https://pokeapi.co/api/v2';
 const pokemonURL = `${pokeApiRootURL}/pokemon`;
 

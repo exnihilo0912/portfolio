@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const pokeApiRootURL = 'https://pokeapi.co/api/v2';
 const pokemonURL = `${pokeApiRootURL}/pokemon`;
@@ -27,22 +28,24 @@ export default function PokemonListPage() {
     <main>
       <h1>Pokemon list page</h1>
       <section className="container container--centered">
-        <select
-          placeholder="Select a pokemon"
-          onChange={(event) => setSelectedPokemonId(event.target.value)}
-        >
+        <ul className='card-list'>
           {pokemons.map(
             (pokemon, index) => (
-              <option
-                key={pokemon.id}
-                value={pokemon.id}
-                checked={selectedPokemonId === pokemon.id}
-              >
-                {pokemon.name}
-              </option>
+              <li>
+                <Link to={`/pokemons/${pokemon.id}`}>
+                  <article
+                    className='card-list__item card--rounded'
+                    key={pokemon.id}
+                    value={pokemon.id}
+                    checked={selectedPokemonId === pokemon.id}
+                  >
+                    {pokemon.name}
+                  </article>
+                </Link>
+              </li>
             )
           )}
-        </select>
+        </ul>
       </section>
     </main>
   );

@@ -3,13 +3,14 @@ import { Link, Outlet } from "react-router-dom";
 function App() {
   return (
     <main className='page'>
-      <header>
+      <header className="page__header">
         <a href="/pokemons">pokemons</a>
         &nbsp;
         <Link to={`pokemons`}>routed pokemons</Link>
       </header>
-      <Outlet />
-      <footer>footer</footer>
+      <main>
+        <Outlet />
+      </main>
     </main>
   );
 }
