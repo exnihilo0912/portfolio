@@ -28,6 +28,12 @@ const router = createBrowserRouter([
         path: "pokemons/:pokemonId",
         element: <PokemonDetailPage />,
         loader: pokemonLoader,
+        // children: [
+        //    {
+        //     path: "about/",
+        //     element: <PokemonPage />,
+        //   },
+        // ]
       },
     ]
   },

@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 import Card from '../components/Card';
 import List from '../components/List';
+import Tabs from '../components/Tabs';
 
 const pokeApiRootURL = 'https://pokeapi.co/api/v2';
 const pokemonURL = `${pokeApiRootURL}/pokemon`;
@@ -104,6 +105,17 @@ export default function PokemonDetailPage() {
                     )
                     : (<p>No pokemon selected</p>)
                 }
+              </div>
+              <div>
+                <h3>Tab test</h3>
+                <div>
+                  <Tabs tabs={[
+                    { id: 'about', header: 'About', content: <p>About that pokemon</p> },
+                    { id: 'stats', header: 'Base Stats', content: <p>Pokemon base stats</p> },
+                    { id: 'evolution', header: 'Evolution', content: <p>Pokemon's evolutions</p> },
+                    { id: 'moves', header: 'Moves', content: <p>Pokemon's moves</p> },
+                  ]}/>
+                </div>
               </div>
             </>
           )}
