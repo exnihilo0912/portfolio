@@ -31,7 +31,7 @@ export default function PokemonListPage() {
         <ul className='card-list'>
           {pokemons.map(
             (pokemon, index) => (
-              <li>
+              <li key={pokemon.id}>
                 <Link to={`/pokemons/${pokemon.id}`}>
                   <article
                     className='card-list__item card--rounded'
