@@ -49,44 +49,18 @@ export default function PokemonDetailPage() {
 
   return (
     <>
-      <h1>{pokemon?.name}</h1>
-      <section className="container container--column container--centered">
-        <Panel>
-          <div>
-            <div>
-              {
-                pokemon
-                  ? (<img
-                      className="sprite" src={pokemon?.sprites.front_default}
-                      alt="pokemon sprite"
-                    />)
-                  : <div className='sprite-placeholder'></div>
-              }
-            </div>
-            <div>
-              <List className="list list--horizontal">
-                {
-                  pokemon?.types
-                    .toSorted(({ slot: a }, { slot: b }) => a > b)
-                    .map(({ type, slot }) => (
-                      <li key={slot}>
-                        <div className="tag">{type.name}</div>
-                      </li>
-                    ))
-                }
-              </List>
-            </div>
-          </div>
-          <h3>Tab test</h3>
-          <div>
-            <Tabs tabs={[
-              { id: 'about', header: 'About', content: <p>About that pokemon</p> },
-              { id: 'stats', header: 'Base Stats', content: <p>Pokemon base stats</p> },
-              { id: 'evolution', header: 'Evolution', content: <p>Pokemon's evolutions</p> },
-              { id: 'moves', header: 'Moves', content: <p>Pokemon's moves</p> },
-            ]}/>
-          </div>
-        </Panel>
+      <section className="container" style={{ padding: '0 1rem 0 1rem'}}>
+        <h1>{pokemon?.name}</h1>
+        <div className="main-image-container">
+          {
+            pokemon
+              ? (<img
+                  className="sprite" src={pokemon?.sprites.front_default}
+                  alt="pokemon sprite"
+                />)
+              : <div className='sprite-placeholder'></div>
+          }
+        </div>
         {/* <Card
           className="card--rounded"
           headerText={pokemon?.name}
@@ -156,6 +130,32 @@ export default function PokemonDetailPage() {
           )}
         /> */}
       </section>
+      <Panel isSection>
+          <div>
+            <div>
+              <List className="list list--horizontal">
+                {
+                  pokemon?.types
+                    .toSorted(({ slot: a }, { slot: b }) => a > b)
+                    .map(({ type, slot }) => (
+                      <li key={slot}>
+                        <div className="tag">{type.name}</div>
+                      </li>
+                    ))
+                }
+              </List>
+            </div>
+          </div>
+          <h3>Tab test</h3>
+          <div>
+            <Tabs tabs={[
+              { id: 'about', header: 'About', content: <p>About that pokemon</p> },
+              { id: 'stats', header: 'Base Stats', content: <p>Pokemon base stats</p> },
+              { id: 'evolution', header: 'Evolution', content: <p>Pokemon's evolutions</p> },
+              { id: 'moves', header: 'Moves', content: <p>Pokemon's moves</p> },
+            ]}/>
+          </div>
+        </Panel>
     </>
   );
 }
