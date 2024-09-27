@@ -25,7 +25,7 @@ export default function PokemonListPage() {
   const selectedPokemon = pokemons.find(({ id }) => Number(selectedPokemonId) === id);
 
   return (
-    <main>
+    <>
       <h1>Pokemon list page</h1>
       <section className="container container--centered">
         <ul className='card-list'>
@@ -47,6 +47,6 @@ export default function PokemonListPage() {
           )}
         </ul>
       </section>
-    </main>
+    </>
   );
 }

@@ -2,16 +2,15 @@ import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <main className='page'>
+    <div className='page page--grey'>
       <header className="page__header">
-        <a href="/pokemons">pokemons</a>
-        &nbsp;
-        <Link to={`pokemons`}>routed pokemons</Link>
+        <Link to={`pokemons`}>Back</Link>
+        <div>Action</div>
       </header>
-      <main>
+      <div className="page__content">
         <Outlet />
-      </main>
-    </main>
+      </div>
+    </div>
   );
 }
 

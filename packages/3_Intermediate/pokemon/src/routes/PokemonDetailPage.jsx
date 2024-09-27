@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 import Card from '../components/Card';
 import List from '../components/List';
+import Panel from '../components/Panel';
 import Tabs from '../components/Tabs';
 
 const pokeApiRootURL = 'https://pokeapi.co/api/v2';
@@ -27,7 +28,7 @@ export default function PokemonDetailPage() {
       async function startFetching() {
         const pokemon = await fetchPokemonById(pokemonId);
         if (!ignore) {
-          setCurrentPokemon(pokemon);
+          setpokemon(pokemon);
         }
       }
 
@@ -39,29 +40,63 @@ export default function PokemonDetailPage() {
         ignore = true;
       };
     }, [pokemonId]);
-    const [currentPokemon, setCurrentPokemon] = useState(null);
+    const [pokemon, setpokemon] = useState(null);
 
-    return currentPokemon;
+    return pokemon;
   }
 
-  const currentPokemon = usePokemon(pokemonId);
+  const pokemon = usePokemon(pokemonId);
 
   return (
     <>
-      <a href='/pokemons'>pokedex</a>
-      <h1>Pokedex</h1>
+      <h1>{pokemon?.name}</h1>
       <section className="container container--column container--centered">
-        <h2>Selected Pokemon</h2>
-        <Card
+        <Panel>
+          <div>
+            <div>
+              {
+                pokemon
+                  ? (<img
+                      className="sprite" src={pokemon?.sprites.front_default}
+                      alt="pokemon sprite"
+                    />)
+                  : <div className='sprite-placeholder'></div>
+              }
+            </div>
+            <div>
+              <List className="list list--horizontal">
+                {
+                  pokemon?.types
+                    .toSorted(({ slot: a }, { slot: b }) => a > b)
+                    .map(({ type, slot }) => (
+                      <li key={slot}>
+                        <div className="tag">{type.name}</div>
+                      </li>
+                    ))
+                }
+              </List>
+            </div>
+          </div>
+          <h3>Tab test</h3>
+          <div>
+            <Tabs tabs={[
+              { id: 'about', header: 'About', content: <p>About that pokemon</p> },
+              { id: 'stats', header: 'Base Stats', content: <p>Pokemon base stats</p> },
+              { id: 'evolution', header: 'Evolution', content: <p>Pokemon's evolutions</p> },
+              { id: 'moves', header: 'Moves', content: <p>Pokemon's moves</p> },
+            ]}/>
+          </div>
+        </Panel>
+        {/* <Card
           className="card--rounded"
-          headerText={currentPokemon?.name}
+          headerText={pokemon?.name}
           renderContent={() => (
             <>
               <div>
                 {
-                  currentPokemon
+                  pokemon
                     ? (<img
-                        className="sprite" src={currentPokemon?.sprites.front_default}
+                        className="sprite" src={pokemon?.sprites.front_default}
                         alt="pokemon sprite"
                       />)
                     : <div className='sprite-placeholder'></div>
@@ -70,7 +105,7 @@ export default function PokemonDetailPage() {
               <div>
                 <List className="list list--horizontal">
                   {
-                    currentPokemon?.types
+                    pokemon?.types
                       .toSorted(({ slot: a }, { slot: b }) => a > b)
                       .map(({ type, slot }) => (
                         <li key={slot}>
@@ -82,21 +117,21 @@ export default function PokemonDetailPage() {
               </div>
               <div>
                 {
-                  currentPokemon
+                  pokemon
                   && (
                     <List>
-                      <li key="height">height: {parseInt(currentPokemon.height, 10) * 10} cm</li>
-                      <li key="weight">weight: {parseInt(currentPokemon.weight, 10) / 10} kg</li>
+                      <li key="height">height: {parseInt(pokemon.height, 10) * 10} cm</li>
+                      <li key="weight">weight: {parseInt(pokemon.weight, 10) / 10} kg</li>
                     </List>
                   )
                 }
               </div>
               <div>
                 {
-                  currentPokemon
+                  pokemon
                     ? (
                       <List>
-                        {currentPokemon?.stats.map(({ stat, base_stat, effort }) => (
+                        {pokemon?.stats.map(({ stat, base_stat, effort }) => (
                           <li key={stat.name}>
                             <p>{stat.name}: {base_stat}</p>
                           </li>
@@ -119,7 +154,7 @@ export default function PokemonDetailPage() {
               </div>
             </>
           )}
-        />
+        /> */}
       </section>
     </>
   );
