@@ -13,7 +13,7 @@
 
 .pokemon-card__body {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 }
 

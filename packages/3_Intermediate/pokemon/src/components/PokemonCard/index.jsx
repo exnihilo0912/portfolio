@@ -23,13 +23,18 @@ export default function PokemonCard({ id }) {
             <div className='pokemon-card__body'>
               <div>
                 <ul>
-                  {pokemon.types}
-                  <li>
-                    <Tag>
-                      <Chip>〒</Chip>
-                      <span>Type 1</span>
-                    </Tag>
-                  </li>
+                  {
+                    pokemon.types.map(({ type }) => (
+                      <li>
+                        <Tag>
+                          <Chip>〒</Chip>
+                          <span style={{ textTransform: 'capitalize' }}>
+                            {type.name}
+                          </span>
+                        </Tag>
+                      </li>
+                    ))
+                  }
                 </ul>
               </div>
               <div className='pokemon-card__sprite-container'>
