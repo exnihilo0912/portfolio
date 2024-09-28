@@ -21,8 +21,6 @@ export default function PokemonListPage() {
     return pokemons;
   }
   const pokemons = usePokemonList();
-  const [selectedPokemonId, setSelectedPokemonId] = useState(null);
-  const selectedPokemon = pokemons.find(({ id }) => Number(selectedPokemonId) === id);
 
   return (
     <>
@@ -37,7 +35,6 @@ export default function PokemonListPage() {
                     className='card-list__item card--rounded'
                     key={pokemon.id}
                     value={pokemon.id}
-                    checked={selectedPokemonId === pokemon.id}
                   >
                     {pokemon.name}
                   </article>

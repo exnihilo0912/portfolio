@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-function App() {
+function Layout() {
   return (
     <div className='page page--grey'>
       <header className="page__header">
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default Layout;

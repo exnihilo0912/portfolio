@@ -8,8 +8,9 @@ import {
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import App from './App';
+import Layout from './components/Layout';
 import ErrorPage from './routes/error';
+import LandingPage from './routes/LandingPage';
 import PokemonPage from './routes/PokemonListPage';
 import PokemonDetailPage, { loader as pokemonLoader } from './routes/PokemonDetailPage';
 
@@ -17,9 +18,13 @@ import PokemonDetailPage, { loader as pokemonLoader } from './routes/PokemonDeta
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        index: true,
+        element: <LandingPage />
+      },
       {
         path: "pokemons/",
         element: <PokemonPage />,
@@ -28,12 +33,6 @@ const router = createBrowserRouter([
         path: "pokemons/:pokemonId",
         element: <PokemonDetailPage />,
         loader: pokemonLoader,
-        // children: [
-        //    {
-        //     path: "about/",
-        //     element: <PokemonPage />,
-        //   },
-        // ]
       },
     ]
   },
