@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import MenuList, { MenuListItem } from '../components/MenuList/Index';
+import PageTitle from '../components/PageTitle';
+import PageSection from '../components/PageSection';
+import PokemonCard from '../components/PokemonCard';
+
 const pokeApiRootURL = 'https://pokeapi.co/api/v2';
 const pokemonURL = `${pokeApiRootURL}/pokemon`;
 const pokemonListURL = `${pokemonURL}?limit=151&offset=0`
@@ -24,26 +29,20 @@ export default function PokemonListPage() {
 
   return (
     <>
-      <h1>Pokemon list page</h1>
-      <section className="container container--centered">
-        <ul className='card-list'>
-          {pokemons.map(
-            (pokemon, index) => (
-              <li key={pokemon.id}>
-                <Link to={`/pokemons/${pokemon.id}`}>
-                  <article
-                    className='card-list__item card--rounded'
-                    key={pokemon.id}
-                    value={pokemon.id}
-                  >
-                    {pokemon.name}
-                  </article>
-                </Link>
-              </li>
-            )
-          )}
-        </ul>
-      </section>
+      <PageSection background="white">
+        <PageTitle>Pokedex</PageTitle>
+        <section className="container container--centered">
+          <MenuList>
+            {pokemons.map(
+              (pokemon, index) => (
+                <MenuListItem key={pokemon.id} to={`/pokemons/${pokemon.id}`}>
+                  <PokemonCard id={pokemon.id} />
+                </MenuListItem>
+              )
+            )}
+          </MenuList>
+        </section>
+      </PageSection>
     </>
   );
 }

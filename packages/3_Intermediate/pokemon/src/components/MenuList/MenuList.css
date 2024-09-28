@@ -5,20 +5,23 @@
 }
 
 .menu-list__item {
-  border-radius: 30px;
-  flex: 1;
+  border-radius: 20px;
   flex-basis: calc(50% - 1rem);
-  height: 100px;
+  min-height: 100px;
   display: flex;
-  align-items: center;
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: hsl(0, 0%, 80%);
-  box-shadow: 0px 8px 10px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0px 8px 10px hsla(0, 0%, 0%, 0.4);
   color: white;
   font-weight: 700;
+}
+
+.menu-list__item a {
+  width: 100%;
 }
 
 .menu-list__item--small {
   height: 70px;
   border-radius: 20px;
+  align-items: center;
 }

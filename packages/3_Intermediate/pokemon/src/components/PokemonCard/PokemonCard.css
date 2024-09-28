@@ -1,0 +1,27 @@
+.pokemon-card {
+  height: 100%;
+  width: 100%;
+}
+
+.pokemon-card__header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.pokemon-card__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemon-card__sprite-container {
+  flex: 0.5;
+}
+
+.pokemon-card__sprite {
+  height: 50px;
+  width: 50px;
+}

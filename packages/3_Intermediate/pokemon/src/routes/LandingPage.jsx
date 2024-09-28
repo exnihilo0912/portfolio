@@ -20,7 +20,7 @@ export default function LandingPage() {
         <MenuList>
           {
             menuItems.map(({ name, url }) => (
-              <MenuListItem size='small' to={url}>
+              <MenuListItem key={name} size='small' to={url}>
                 {name}
               </MenuListItem>
             ))

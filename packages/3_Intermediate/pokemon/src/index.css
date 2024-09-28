@@ -152,7 +152,7 @@ li {
 .sprite-placeholder {
   height: 100%;
   width: 100%;
-  background-color: hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 50%);
   border-radius: 10px;
 }
 
