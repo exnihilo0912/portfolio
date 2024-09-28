@@ -30,6 +30,7 @@ export default function PokemonListPage() {
     <>
       <PageSection background="white">
         <PageTitle>Pokedex</PageTitle>
+        <p>Use the advanced searchto find Pokemon by type, weakness, ability and more!</p>
         <section className="container container--centered">
           <FilterableMenuList
             items={pokemons}

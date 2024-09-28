@@ -1,3 +1,5 @@
+import './FilterableMenuList.css';
+
 import { useState } from 'react';
 import MenuList, { MenuListItem } from "../MenuList/Index";
 
@@ -12,12 +14,14 @@ export default function FilterableMenuList({ items, renderItem, onFilterItems })
 
   return (
     <div>
-      <header>
+      <header className='filterable-menu-list__header'>
         <input
+          className='filterable-menu-list__search-input'
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
+        <button>🔽</button>
       </header>
       <MenuList items={filteredItems} renderItem={renderItem} />
     </div>

@@ -1,0 +1,15 @@
+.filterable-menu-list {
+
+}
+
+.filterable-menu-list__header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filterable-menu-list__search-input {
+  height: 2rem;
+  line-height: 2rem;
+  flex: 1;
+}
