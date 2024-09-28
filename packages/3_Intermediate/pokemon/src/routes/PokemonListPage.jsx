@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
-import MenuList, { MenuListItem } from '../components/MenuList/Index';
+import FilterableMenuList, { MenuListItem } from '../components/FilterableMenuList';
 import PageTitle from '../components/PageTitle';
 import PageSection from '../components/PageSection';
 import PokemonCard from '../components/PokemonCard';
@@ -32,12 +31,15 @@ export default function PokemonListPage() {
       <PageSection background="white">
         <PageTitle>Pokedex</PageTitle>
         <section className="container container--centered">
-          <MenuList
+          <FilterableMenuList
             items={pokemons}
             renderItem={(pokemon) => (
               <MenuListItem key={pokemon.id} to={`/pokemons/${pokemon.id}`}>
                 <PokemonCard id={pokemon.id} />
               </MenuListItem>
+            )}
+            onFilterItems={(query, pokemon) => (
+              pokemon.name.toLowerCase().startsWith(query.toLowerCase())
             )}
           />
         </section>

@@ -21,7 +21,7 @@
 }
 
 .menu-list__item--small {
-  height: 70px;
+  min-height: 70px;
   border-radius: 20px;
   align-items: center;
 }
