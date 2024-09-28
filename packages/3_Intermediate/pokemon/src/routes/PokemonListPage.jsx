@@ -32,15 +32,14 @@ export default function PokemonListPage() {
       <PageSection background="white">
         <PageTitle>Pokedex</PageTitle>
         <section className="container container--centered">
-          <MenuList>
-            {pokemons.map(
-              (pokemon, index) => (
-                <MenuListItem key={pokemon.id} to={`/pokemons/${pokemon.id}`}>
-                  <PokemonCard id={pokemon.id} />
-                </MenuListItem>
-              )
+          <MenuList
+            items={pokemons}
+            renderItem={(pokemon) => (
+              <MenuListItem key={pokemon.id} to={`/pokemons/${pokemon.id}`}>
+                <PokemonCard id={pokemon.id} />
+              </MenuListItem>
             )}
-          </MenuList>
+          />
         </section>
       </PageSection>
     </>

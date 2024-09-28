@@ -2,8 +2,16 @@ import { Link } from 'react-router-dom';
 
 import './MenuList.css';
 
-function MenuList({ children }) {
-  return (<ul className="menu-list">{children}</ul>);
+function MenuList({ children, items, renderItem }) {
+  return (
+    <ul className="menu-list">
+      {
+        items
+        ? items.map((item) => renderItem(item))
+        : children
+      }
+    </ul>
+  );
 }
 
 function MenuListItem({ children, to, size = 'medium' }) {
