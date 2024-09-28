@@ -14,7 +14,7 @@ function MenuList({ children, items, renderItem }) {
   );
 }
 
-function MenuListItem({ children, to, size = 'medium' }) {
+function MenuListItem({ children, itemKey, to, size = 'medium' }) {
   const classes = [
     'menu-list__item',
     ...size === 'small'
@@ -23,11 +23,11 @@ function MenuListItem({ children, to, size = 'medium' }) {
   ].join(' ');
 
   return (
-      <li className={classes}>
-        <Link to={to}>
-          {children}
-        </Link>
-      </li>
+    <li key={itemKey} className={classes}>
+      <Link to={to}>
+        {children}
+      </Link>
+    </li>
   );
 }
 

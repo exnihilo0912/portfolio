@@ -25,7 +25,7 @@ export default function PokemonCard({ id }) {
                 <ul>
                   {
                     pokemon.types.map(({ type }) => (
-                      <li>
+                      <li key={type.name}>
                         <Tag>
                           <Chip>〒</Chip>
                           <span style={{ textTransform: 'capitalize' }}>
