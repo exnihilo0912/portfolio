@@ -10,6 +10,7 @@ const pokemonURL = `${pokeApiRootURL}/pokemon`;
 const pokemonListURL = `${pokemonURL}?limit=151&offset=0`
 
 export default function PokemonListPage() {
+  // TODO Put in provider + combined
   function usePokemonList() {
     useEffect(() => {
       async function getPokemons() {
@@ -25,7 +26,7 @@ export default function PokemonListPage() {
     return pokemons;
   }
   const pokemons = usePokemonList();
-
+// ----------------------
   return (
     <>
       <PageSection background="white">
