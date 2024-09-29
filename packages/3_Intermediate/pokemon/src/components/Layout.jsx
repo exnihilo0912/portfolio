@@ -13,6 +13,7 @@ function Layout() {
       <div className="page__content">
         <Outlet />
       </div>
+      <div id="modal"></div>
     </div>
   );
 }
