@@ -10,27 +10,28 @@ async function fetchPokemonById(id) {
 }
 
 function usePokemon(pokemonId) {
-    useEffect(() => {
-      let ignore = false;
+  const [pokemon, setpokemon] = useState(null);
 
-      async function startFetching() {
-        const pokemon = await fetchPokemonById(pokemonId);
-        if (!ignore) {
-          setpokemon(pokemon);
-        }
+  useEffect(() => {
+    let ignore = false;
+
+    async function startFetching() {
+      const pokemon = await fetchPokemonById(pokemonId);
+      if (!ignore) {
+        setpokemon(pokemon);
       }
+    }
 
-      if (pokemonId) {
-        startFetching();
-      }
+    if (pokemonId) {
+      startFetching();
+    }
 
-      return () => {
-        ignore = true;
-      };
-    }, [pokemonId]);
-    const [pokemon, setpokemon] = useState(null);
+    return () => {
+      ignore = true;
+    };
+  }, [pokemonId]);
 
-    return pokemon;
-  }
+  return pokemon;
+}
 
   export default usePokemon;

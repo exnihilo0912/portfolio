@@ -2,6 +2,7 @@ import './PokemonCard.css';
 
 import usePokemon from '../../customHooks/usePokemon';
 import Chip from '../Chip';
+import PokemonType from '../PokemonType';
 import Tag from '../Tag';
 
 export default function PokemonCard({ id }) {
@@ -26,12 +27,7 @@ export default function PokemonCard({ id }) {
                   {
                     pokemon.types.map(({ type }) => (
                       <li key={type.name}>
-                        <Tag>
-                          <Chip>〒</Chip>
-                          <span style={{ textTransform: 'capitalize' }}>
-                            {type.name}
-                          </span>
-                        </Tag>
+                        <PokemonType type={type.name} />
                       </li>
                     ))
                   }

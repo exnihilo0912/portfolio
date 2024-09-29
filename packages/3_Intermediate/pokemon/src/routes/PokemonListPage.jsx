@@ -7,7 +7,7 @@ import PokemonCard from '../components/PokemonCard';
 
 const pokeApiRootURL = 'https://pokeapi.co/api/v2';
 const pokemonURL = `${pokeApiRootURL}/pokemon`;
-const pokemonListURL = `${pokemonURL}?limit=151&offset=0`
+const pokemonListURL = `${pokemonURL}?limit=151&offset=0`;
 
 export default function PokemonListPage() {
   // TODO Put in provider + combined
