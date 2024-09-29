@@ -1,9 +1,11 @@
+import { FaMagnifyingGlass } from 'react-icons/fa6';
+
 import './SearchInput.css';
 
 export default function SearchInput({ id, placeholder, name, label, value, onChange }) {
   return (
     <div className='search-input-container'>
-      <span>🔎</span>
+      <FaMagnifyingGlass />
       <input
         id={id}
         name={name}
