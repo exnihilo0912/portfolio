@@ -1,0 +1,24 @@
+.search-input-container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  border: 1px solid hsl(0, 0%, 80%);
+  height: 2rem;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+.search-input-container__label {
+  visibility: hidden;
+}
+
+.search-input-container__input {
+  flex: 1;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

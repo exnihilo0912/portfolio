@@ -1,5 +1,4 @@
-import MenuList, { MenuListItem } from '../components/MenuList/Index';
-import PageSection from '../components/PageSection/index';
+import MenuList, { MenuListItem } from '../components/MenuList';
 import PageTitle from '../components/PageTitle/index';
 import Panel from '../components/Panel';
 

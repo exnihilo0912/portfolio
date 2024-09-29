@@ -1,7 +1,8 @@
 import './FilterableMenuList.css';
 
 import { useState } from 'react';
-import MenuList, { MenuListItem } from "../MenuList/Index";
+import MenuList, { MenuListItem } from "../MenuList";
+import SearchInput from '../SearchInput';
 
 export default function FilterableMenuList({ items, renderItem, onFilterItems }) {
   const [query, setQuery] = useState('');
@@ -15,12 +16,7 @@ export default function FilterableMenuList({ items, renderItem, onFilterItems })
   return (
     <div className='filterable-menu-list'>
       <header className='filterable-menu-list__header'>
-        <input
-          className='filterable-menu-list__search-input'
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+        <SearchInput value={query} onChange={(value) => setQuery(value)} placeholder="Search a pokemon" />
         <button>🔽</button>
       </header>
       <MenuList items={filteredItems} renderItem={renderItem} />
