@@ -1,9 +1,7 @@
 import './PokemonCard.css';
 
 import usePokemon from '../../customHooks/usePokemon';
-import Chip from '../Chip';
-import PokemonType from '../PokemonType';
-import Tag from '../Tag';
+import PokemonType, { typeDetailByTypeName } from '../PokemonType';
 
 export default function PokemonCard({ id }) {
   const pokemon = usePokemon(id)
@@ -16,6 +14,7 @@ export default function PokemonCard({ id }) {
           <article
             className='pokemon-card'
             value={pokemon.id}
+            style={{ background: typeDetailByTypeName[pokemon?.types?.[0]?.type?.name]?.backgroundColor }}
           >
             <header className='pokemon-card__header'>
               <span>{pokemon.name}</span>
@@ -26,7 +25,7 @@ export default function PokemonCard({ id }) {
                 <ul>
                   {
                     pokemon.types.map(({ type }) => (
-                      <li key={type.name}>
+                      <li key={type.name} style={{ marginBottom: '0.2rem' }}>
                         <PokemonType type={type.name} />
                       </li>
                     ))

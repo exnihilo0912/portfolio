@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 import List from '../components/List';
 import Panel from '../components/Panel';
+import PokemonType from '../components/PokemonType';
 import Tabs from '../components/Tabs';
 
 import usePokemon from '../customHooks/usePokemon';
@@ -33,13 +34,13 @@ export default function PokemonDetailPage() {
       <Panel isSection>
           <div>
             <div>
-              <List className="list list--horizontal">
+              <List className="list">
                 {
                   pokemon?.types
                     .toSorted(({ slot: a }, { slot: b }) => a > b)
                     .map(({ type, slot }) => (
-                      <li key={slot}>
-                        <div className="tag">{type.name}</div>
+                      <li key={type.name}>
+                        <PokemonType type={type.name} />
                       </li>
                     ))
                 }

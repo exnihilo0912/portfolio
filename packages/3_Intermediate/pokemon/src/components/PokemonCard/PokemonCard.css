@@ -1,6 +1,9 @@
 .pokemon-card {
+  padding: 0.8rem;
+  border-radius: 20px;
   height: 100%;
   width: 100%;
+  background-color: hsl(0, 0%, 80%);
 }
 
 .pokemon-card__header {

@@ -1,17 +1,14 @@
 .menu-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .menu-list__item {
-  border-radius: 20px;
-  flex-basis: calc(50% - 1rem);
+  flex-basis: calc(50% - 0.5rem);
   min-height: 100px;
   display: flex;
-  padding: 0.8rem;
-  background-color: hsl(0, 0%, 80%);
-  box-shadow: 0px 8px 10px hsla(0, 0%, 0%, 0.4);
   color: white;
   font-weight: 700;
 }
