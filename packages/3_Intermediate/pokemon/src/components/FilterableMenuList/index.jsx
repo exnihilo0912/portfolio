@@ -13,7 +13,7 @@ export default function FilterableMenuList({ items, renderItem, onFilterItems })
     : items;
 
   return (
-    <div>
+    <div className='filterable-menu-list'>
       <header className='filterable-menu-list__header'>
         <input
           className='filterable-menu-list__search-input'
