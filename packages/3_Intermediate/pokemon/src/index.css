@@ -42,18 +42,12 @@ li {
   height: 100%;
 }
 
+/* PokemonListPage */
+/* Move to section component */
 .container {}
 
 .container--column {
   flex-direction: column;
-}
-
-.list {}
-
-.list--horizontal {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
 }
 
 .container--centered {
@@ -62,20 +56,7 @@ li {
   justify-content: center;
 }
 
-.card-list {
-  display: flex;
-  max-width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.card-list__item {
-  border: 1px solid hsl(0, 0%, 80%);
-  padding: 0.5rem;
-  min-height: 80px;
-  min-width: 200px;
-}
-
+/* PokemonDetailPage */
 .main-image-container {
   margin: 0px auto;
   height: 30vh;
@@ -84,6 +65,7 @@ li {
   top: 4vh;
 }
 
+/* PokemonDetailPage */
 .sprite {
   height: 100%;
   width: 100%;

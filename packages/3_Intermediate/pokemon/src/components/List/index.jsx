@@ -1,4 +1,6 @@
 
+import './List.css';
+
 function List({ children, ...props }) {
   return (
     <ul {...props}>
@@ -14,3 +16,7 @@ function ListItem({ children, ...props }) {
 }
 
 export default List;
+export {
+  List,
+  ListItem,
+};
