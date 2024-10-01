@@ -80,6 +80,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Roadmap
 
 - [ ] Add basic sitemap
+- [ ] Add PageLayout component
+- [ ] Add Modal component
 - [ ] Implement pokedex pages
   - [ ] Implement pokedex list page
   - [ ] Implement pokedex detail page
@@ -87,7 +89,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] Add Empty state UI/component
 - [ ] Add Loading state UI/component
 - [ ] Clean and improve style
-  - [ ] Decide between global CSS, Style Component and CSS module
+  - [x] Decide between global CSS, Style Component and CSS module
   - [ ] Add [SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet)
   - [ ] Add [Post CSS](https://create-react-app.dev/docs/post-processing-css)
 - [ ] Add [Code Splitting](https://create-react-app.dev/docs/code-splitting)
