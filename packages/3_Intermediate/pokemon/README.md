@@ -83,6 +83,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] Implement pokedex pages
   - [ ] Implement pokedex list page
   - [ ] Implement pokedex detail page
+- [ ] Add proper error component/page
+- [ ] Add Empty state UI/component
+- [ ] Add Loading state UI/component
 - [ ] Clean and improve style
   - [ ] Decide between global CSS, Style Component and CSS module
   - [ ] Add [SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet)
