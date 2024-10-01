@@ -76,3 +76,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 [Design Idea #2-A](https://dribbble.com/shots/6545819-Pokedex-App)
 [Design Idea #2-B](https://dribbble.com/shots/6563578-Pokedex-App-Animation)
 [Design Idea #3 + figma](https://www.figma.com/community/file/1202971127473077147)
+
+# Roadmap
+
+- [ ] Add basic sitemap
+- [ ] Implement pokedex pages
+  - [ ] Implement pokedex list page
+  - [ ] Implement pokedex detail page
+- [ ] Clean and improve style
+  - [ ] Decide between global CSS, Style Component and CSS module
+  - [ ] Add [SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet)
+  - [ ] Add [Post CSS](https://create-react-app.dev/docs/post-processing-css)
+- [ ] Add [Code Splitting](https://create-react-app.dev/docs/code-splitting)
+- [ ] Add [TypeScript](https://create-react-app.dev/docs/adding-typescript)
+- [ ] Add GraphQL ([Relay](https://create-react-app.dev/docs/adding-relay)) and network/route optimization
+- [ ] Add [Authentication](https://dev.to/hramonpereira/how-to-manage-user-authentication-in-reactjs-nextjs-vuejs-and-nuxtjs-using-clerk-136l?context=digest)
+- [ ] Add profile & [session](https://www.sitepoint.com/react-cookies-sessions/)
+- [ ] Add user favorite and data save per user
+- [ ] Add [i18n](https://lokalise.com/blog/react-i18n-intl/)
+- [ ] Add [Hosting](https://create-react-app.dev/docs/deployment)
+- [ ] Add [PWA](https://create-react-app.dev/docs/making-a-progressive-web-app)
+- [ ] Measure and improve [performance](https://create-react-app.dev/docs/measuring-performance)
