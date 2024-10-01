@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { Outlet } from "react-router-dom";
 
+import './Layout.css';
+
 function Layout() {
   const navigate = useNavigate();
   const isRootPage = window.location.href.replace(/https?:\/\//, '').split('/').length <= 2;

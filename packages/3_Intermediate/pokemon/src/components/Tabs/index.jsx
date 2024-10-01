@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// window.location.href + useSyncExternalStore -> useURLAnchor
+import './Tabs.css';
 
 function Tabs({ tabs }) {
   useEffect(() => {

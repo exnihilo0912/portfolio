@@ -1,4 +1,4 @@
-
+import './Panel.css';
 
 export default function Panel({ children, isSection }) {
   return (

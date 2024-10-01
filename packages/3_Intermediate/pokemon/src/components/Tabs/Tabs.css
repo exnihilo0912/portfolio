@@ -1,0 +1,23 @@
+.tab {}
+
+.tab__header {
+  display: flex;
+}
+
+.tab__heading {
+  cursor: pointer;
+  padding: 0.2rem
+}
+
+.tab__heading.tab__heading--selected {
+  border-bottom: 2px solid hsl(0, 0%, 70%);
+}
+
+.tab__heading:hover {
+  background-color: hsl(0, 0%, 90%);
+  border-bottom: 2px solid hsl(0, 0%, 80%);
+}
+
+.tab__heading:active {
+  background-color: hsl(0, 0%, 80%);
+}
