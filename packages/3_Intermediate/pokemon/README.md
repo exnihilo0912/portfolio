@@ -101,4 +101,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] Add [i18n](https://lokalise.com/blog/react-i18n-intl/)
 - [ ] Add [Hosting](https://create-react-app.dev/docs/deployment)
 - [ ] Add [PWA](https://create-react-app.dev/docs/making-a-progressive-web-app)
+- [ ] Update markup with [semantic markup](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - [ ] Measure and improve [performance](https://create-react-app.dev/docs/measuring-performance)
