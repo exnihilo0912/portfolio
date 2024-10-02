@@ -90,6 +90,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] Add Loading state UI/component
 - [ ] Clean and improve style
   - [x] Decide between global CSS, Style Component and CSS module
+  - [ ] Refactor to use Ant Design CSS pattern
   - [ ] Add [SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet)
   - [ ] Add [Post CSS](https://create-react-app.dev/docs/post-processing-css)
 - [ ] Add [Code Splitting](https://create-react-app.dev/docs/code-splitting)
