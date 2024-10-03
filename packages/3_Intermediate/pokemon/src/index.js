@@ -9,10 +9,21 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import Layout from './components/Layout';
+import AbilityDetailPage from './routes/AbilityDetailPage';
+import AbilityListPage from './routes/AbilityListPage';
 import ErrorPage from './routes/error';
+import ItemDetailPage from './routes/ItemDetailPage';
+import ItemListPage from './routes/ItemListPage';
 import LandingPage from './routes/LandingPage';
-import PokemonPage from './routes/PokemonListPage';
+import LocationDetailPage from './routes/LocationDetailPage';
+import LocationListPage from './routes/LocationListPage';
+import MoveDetailPage from './routes/MoveDetailPage';
+import MoveListPage from './routes/MoveListPage';
 import PokemonDetailPage, { loader as pokemonLoader } from './routes/PokemonDetailPage';
+import PokemonListPage from './routes/PokemonListPage';
+
+
+import TypeChartPage from './routes/TypeChartPage';
 
 
 const router = createBrowserRouter([
@@ -27,12 +38,48 @@ const router = createBrowserRouter([
       },
       {
         path: "pokemons/",
-        element: <PokemonPage />,
+        element: <PokemonListPage />,
       },
       {
         path: "pokemons/:pokemonId",
         element: <PokemonDetailPage />,
         loader: pokemonLoader,
+      },
+      {
+        path: "moves/",
+        element: <MoveListPage />,
+      },
+      {
+        path: "moves/:moveId",
+        element: <MoveDetailPage />,
+      },
+      {
+        path: "abilities/",
+        element: <AbilityListPage />,
+      },
+      {
+        path: "abilities/:abilityId",
+        element: <AbilityDetailPage />,
+      },
+      {
+        path: "items/",
+        element: <ItemListPage />,
+      },
+      {
+        path: "items/:itemId",
+        element: <ItemDetailPage />,
+      },
+      {
+        path: "locations/",
+        element: <LocationListPage />,
+      },
+      {
+        path: "locations/:abilityId",
+        element: <LocationDetailPage />,
+      },
+      {
+        path: "type-chart/",
+        element: <TypeChartPage />,
       },
     ]
   },

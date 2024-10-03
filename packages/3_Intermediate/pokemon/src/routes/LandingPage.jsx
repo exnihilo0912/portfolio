@@ -8,7 +8,7 @@ const menuItems = [
   { name: 'Abilities', url: 'abilities/' },
   { name: 'Items', url: 'items/' },
   { name: 'Locations', url: 'locations/' },
-  { name: 'Type Charts', url: 'typecharts/' },
+  { name: 'Type Charts', url: 'type-chart/' },
 ]
 
 export default function LandingPage() {

@@ -56,7 +56,7 @@ export default function PokemonDetailPage() {
               { id: 'moves', header: 'Moves', content: <p>Pokemon's moves</p> },
             ]}/>
           </div>
-        </Panel>
+      </Panel>
     </>
   );
 }
