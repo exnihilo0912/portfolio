@@ -79,7 +79,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Roadmap
 
-- [ ] Add basic sitemap
+- [x] Add basic sitemap
 - [ ] Add PageLayout component
 - [ ] Add Modal component
 - [ ] Implement pokedex pages
@@ -98,7 +98,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] Add GraphQL ([Relay](https://create-react-app.dev/docs/adding-relay)) and network/route optimization
 - [ ] Add [Authentication](https://dev.to/hramonpereira/how-to-manage-user-authentication-in-reactjs-nextjs-vuejs-and-nuxtjs-using-clerk-136l?context=digest)
 - [ ] Add profile & [session](https://www.sitepoint.com/react-cookies-sessions/)
-- [ ] Add user favorite and data save per user
+- [ ] Add user favorite and [data save](https://github.com/orgs/react-hook-form/discussions/9910#discussioncomment-9250882) per user
 - [ ] Add [i18n](https://lokalise.com/blog/react-i18n-intl/)
 - [ ] Add [Hosting](https://create-react-app.dev/docs/deployment)
 - [ ] Add [PWA](https://create-react-app.dev/docs/making-a-progressive-web-app)
