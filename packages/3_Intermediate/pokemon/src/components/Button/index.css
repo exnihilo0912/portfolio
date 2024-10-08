@@ -1,14 +1,17 @@
 .button {
   border: none;
-  background: hsl(0, 0%, 80%);
-  padding: 0.5rem 1rem;
+  background: hsl(0, 0%, 85%);
+  padding: 0.5rem;
+  height: 2rem;
+  min-width: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 200ms;
+  border-radius: 5px;
 }
 
 .button:hover {
-  background: hsl(0, 0%, 70%);
+  background: hsl(0, 0%, 80%);
   cursor: pointer;
 }
