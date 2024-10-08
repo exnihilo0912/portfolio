@@ -1,6 +1,6 @@
 import MenuList, { MenuListItem } from '../components/MenuList';
-import PageTitle from '../components/PageTitle/index';
-import Panel from '../components/Panel';
+import PageTitle from '../components/PageTitle';
+import PageSection from '../components/PageSection';
 
 const menuItems = [
   { name: 'Pokedex', url: 'pokemons/' },
@@ -14,7 +14,7 @@ const menuItems = [
 export default function LandingPage() {
   return (
     <>
-      <Panel isSection>
+      <PageSection background="white">
         <PageTitle>What pokemon are you looking for?</PageTitle>
         <MenuList>
           {
@@ -25,7 +25,7 @@ export default function LandingPage() {
             ))
           }
         </MenuList>
-      </Panel>
+      </PageSection>
       <section>
         <ul>
           <li>news article</li>
