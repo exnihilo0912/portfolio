@@ -12,6 +12,88 @@ export async function loader({ params: { pokemonId } }) {
   return { pokemonId };
 }
 
+
+function PokemonAbout() {
+  return (
+    <>
+      <p>Pokedex description</p>
+      <div>
+        <div>weigth</div>
+        <div>height</div>
+      </div>
+      <div>breeding</div>
+      <div>abilities</div>
+    </>
+  );
+}
+
+function PokemonStat() {
+  return (
+    <>
+      <table>
+        <tbody>
+          <tr>
+            <td>HP</td>
+            <td>value</td>
+            <td>progress bar</td>
+          </tr>
+          <tr>
+            <td>Attack</td>
+            <td>value</td>
+            <td>progress bar</td>
+          </tr>
+          <tr>
+            <td>Defence</td>
+            <td>value</td>
+            <td>progress bar</td>
+          </tr>
+          <tr>
+            <td>Sp. Atk</td>
+            <td>value</td>
+            <td>progress bar</td>
+          </tr>
+          <tr>
+            <td>Sp. Def</td>
+            <td>value</td>
+            <td>progress bar</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>value</td>
+            <td>progress bar</td>
+          </tr>
+        </tbody>
+      </table>
+    </>
+  );
+}
+
+function PokemonMoveList() {
+  return (
+    <ul>
+      <li>Move</li>
+    </ul>
+  );
+}
+
+function PokemonEvolutionTimeline() {
+  return (
+    <div>
+      <div>
+        <div>sprite</div>
+        <div>
+          <span>index</span>
+          <span>name</span>
+          <ul><li>type</li></ul>
+        </div>
+        <div>
+          <div>(left border vetical line) <span>evolution condition</span></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PokemonDetailPage() {
   const { pokemonId } = useLoaderData();
   const pokemon = usePokemon(pokemonId);
@@ -50,10 +132,10 @@ export default function PokemonDetailPage() {
           <h3>Tab test</h3>
           <div>
             <Tabs tabs={[
-              { id: 'about', header: 'About', content: <p>About that pokemon</p> },
-              { id: 'stats', header: 'Base Stats', content: <p>Pokemon base stats</p> },
-              { id: 'evolution', header: 'Evolution', content: <p>Pokemon's evolutions</p> },
-              { id: 'moves', header: 'Moves', content: <p>Pokemon's moves</p> },
+              { id: 'about', header: 'About', content: <PokemonAbout/> },
+              { id: 'stats', header: 'Base Stats', content: <PokemonStat /> },
+              { id: 'evolution', header: 'Evolution', content: <PokemonMoveList /> },
+              { id: 'moves', header: 'Moves', content: <PokemonEvolutionTimeline /> },
             ]}/>
           </div>
       </Panel>
