@@ -58,8 +58,8 @@ export default function PokemonDetailPage() {
             <Tabs tabs={[
               { id: 'about', header: 'About', content: <PokemonAbout pokemon={pokemon}/> },
               { id: 'stats', header: 'Base Stats', content: <PokemonStats pokemon={pokemon} /> },
-              { id: 'evolution', header: 'Evolution', content: <PokemonMoveList /> },
-              { id: 'moves', header: 'Moves', content: <PokemonEvolutionTimeline /> },
+              { id: 'evolution', header: 'Evolution', content: <PokemonEvolutionTimeline pokemon={pokemon} /> },
+              { id: 'moves', header: 'Moves', content: <PokemonMoveList pokemon={pokemon} /> },
             ]}/>
           </div>
       </Panel>
