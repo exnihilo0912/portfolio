@@ -5,6 +5,10 @@ import List from '../components/List';
 import Panel from '../components/Panel';
 import PokemonType from '../components/PokemonType';
 import Tabs from '../components/Tabs';
+import PokemonAbout from '../components/PokemonAbout';
+import PokemonMoveList from '../components/PokemonMoveList';
+import PokemonStats from '../components/PokemonStats';
+import PokemonEvolutionTimeline from '../components/PokemonEvolutionTimeline';
 
 import usePokemon from '../customHooks/usePokemon';
 
@@ -13,86 +17,6 @@ export async function loader({ params: { pokemonId } }) {
 }
 
 
-function PokemonAbout() {
-  return (
-    <>
-      <p>Pokedex description</p>
-      <div>
-        <div>weigth</div>
-        <div>height</div>
-      </div>
-      <div>breeding</div>
-      <div>abilities</div>
-    </>
-  );
-}
-
-function PokemonStat() {
-  return (
-    <>
-      <table>
-        <tbody>
-          <tr>
-            <td>HP</td>
-            <td>value</td>
-            <td>progress bar</td>
-          </tr>
-          <tr>
-            <td>Attack</td>
-            <td>value</td>
-            <td>progress bar</td>
-          </tr>
-          <tr>
-            <td>Defence</td>
-            <td>value</td>
-            <td>progress bar</td>
-          </tr>
-          <tr>
-            <td>Sp. Atk</td>
-            <td>value</td>
-            <td>progress bar</td>
-          </tr>
-          <tr>
-            <td>Sp. Def</td>
-            <td>value</td>
-            <td>progress bar</td>
-          </tr>
-          <tr>
-            <td>Speed</td>
-            <td>value</td>
-            <td>progress bar</td>
-          </tr>
-        </tbody>
-      </table>
-    </>
-  );
-}
-
-function PokemonMoveList() {
-  return (
-    <ul>
-      <li>Move</li>
-    </ul>
-  );
-}
-
-function PokemonEvolutionTimeline() {
-  return (
-    <div>
-      <div>
-        <div>sprite</div>
-        <div>
-          <span>index</span>
-          <span>name</span>
-          <ul><li>type</li></ul>
-        </div>
-        <div>
-          <div>(left border vetical line) <span>evolution condition</span></div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function PokemonDetailPage() {
   const { pokemonId } = useLoaderData();
@@ -132,8 +56,8 @@ export default function PokemonDetailPage() {
           <h3>Tab test</h3>
           <div>
             <Tabs tabs={[
-              { id: 'about', header: 'About', content: <PokemonAbout/> },
-              { id: 'stats', header: 'Base Stats', content: <PokemonStat /> },
+              { id: 'about', header: 'About', content: <PokemonAbout pokemon={pokemon}/> },
+              { id: 'stats', header: 'Base Stats', content: <PokemonStats /> },
               { id: 'evolution', header: 'Evolution', content: <PokemonMoveList /> },
               { id: 'moves', header: 'Moves', content: <PokemonEvolutionTimeline /> },
             ]}/>
