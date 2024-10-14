@@ -53,7 +53,6 @@ export default function PokemonDetailPage() {
               </List>
             </div>
           </div>
-          <h3>Tab test</h3>
           <div>
             <Tabs tabs={[
               { id: 'about', header: 'About', content: <PokemonAbout pokemon={pokemon}/> },

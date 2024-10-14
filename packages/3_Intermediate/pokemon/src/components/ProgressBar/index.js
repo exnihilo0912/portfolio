@@ -5,11 +5,11 @@ export default function ProgressBar({ value, maxValue, stepCount = 15 }) {
   const steps = (new Array(stepCount)).fill(0);
 
   return (
-    <div className='progress-bar_container'>
+    <div className='progress-bar__container'>
       {steps.map((step, stepIndex) => (
         ((stepIndex + 1) <= activeStepsCount)
-        ? <div className='progress-bar_step progress-bar_step--active'></div>
-        : <div className='progress-bar_step'></div>
+          ? <div key={stepIndex} className='progress-bar__step progress-bar__step--active'></div>
+          : <div key={stepIndex} className='progress-bar__step'></div>
       ))}
     </div>
   );

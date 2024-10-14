@@ -1,0 +1,7 @@
+.stat-table {}
+
+.stat-table__row {}
+
+.stat-table__cell {
+  padding: 0 0.5rem;
+}

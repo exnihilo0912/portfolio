@@ -1,9 +1,9 @@
-.progress-bar_container {
+.progress-bar__container {
   display: flex;
   gap: 5px;
 }
 
-.progress-bar_step {
+.progress-bar__step {
   flex: 1;
   border-radius: 5px;
   background-color: #dae0e9;
@@ -11,6 +11,6 @@
   height: 1.6rem;
 }
 
-.progress-bar_step.progress-bar_step--active {
+.progress-bar__step.progress-bar__step--active {
   background-color: #ffc400;
 }

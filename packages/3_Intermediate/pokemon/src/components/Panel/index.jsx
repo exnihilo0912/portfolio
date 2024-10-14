@@ -16,7 +16,6 @@ export default function Panel({ children, isSection }) {
             </section>
           )
       }
-      
     </>
   );
 }
