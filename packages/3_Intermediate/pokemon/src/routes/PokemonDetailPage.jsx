@@ -16,8 +16,6 @@ export async function loader({ params: { pokemonId } }) {
   return { pokemonId };
 }
 
-
-
 export default function PokemonDetailPage() {
   const { pokemonId } = useLoaderData();
   const pokemon = usePokemon(pokemonId);

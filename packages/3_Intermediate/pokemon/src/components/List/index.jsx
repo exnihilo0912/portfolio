@@ -1,10 +1,20 @@
 
 import './List.css';
 
-function List({ children, ...props }) {
+function List({ children, items, renderItem, ...props }) {
   return (
     <ul {...props}>
-      {children}
+      {
+        items
+          ? renderItem
+            ? items.map((item, index) => (
+              renderItem(item, index)
+            ))
+            : items.map((item, index) => (
+              <ListItem key={index}>{item}</ListItem>
+            ))
+          : children
+      }
     </ul>
   );
 }
