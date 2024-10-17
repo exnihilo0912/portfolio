@@ -17,7 +17,6 @@ export default function PokemonMoveList({ pokemon }) {
   const machineLearnedMoves = moves?.filter(({ version_group_details }) => version_group_details.at(0).move_learn_method.name === 'machine');
   return (
     <div>
-      <div>Moves</div>
       <div>Learned</div>
       {levelUpLearnedMoves && (
         <List
@@ -33,14 +32,12 @@ export default function PokemonMoveList({ pokemon }) {
         />
       )}
       <hr/>
-      <div>Learned</div>
+      <div>Taught</div>
       <List
         items={machineLearnedMoves}
-        renderItem={({ move, version_group_details }, index) => (
+        renderItem={(move, index) => (
           <ListItem key={index} style={{ padding: '0.5rem 1rem', borderBottom: '1px solid hsl(0, 0%, 90%)' }}>
-            <span style={{ textTransform: 'capitalize', fontWeight: '500' }}>{move.name}</span>
-            &nbsp;
-            <small style={{ color: 'hsl(0, 0%, 50%)' }}>CT.??</small>
+            <PokemonMove move={move} />
           </ListItem>
         )}
       />
