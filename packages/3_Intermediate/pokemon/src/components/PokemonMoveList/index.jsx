@@ -1,3 +1,5 @@
+import List, { ListItem } from "../List";
+
 export default function PokemonMoveList({ pokemon }) {
   const { moves } = pokemon || {};
   const levelUpLearnedMoves = moves?.filter(({ version_group_details }) => version_group_details.at(0).move_learn_method.name === 'level-up');
@@ -16,11 +18,16 @@ export default function PokemonMoveList({ pokemon }) {
     <div>
       <div>Moves</div>
       <div>Learned</div>
-      <ul>
-        {levelUpLearnedMoves && levelUpLearnedMoves.map(({ move, version_group_details }) => (
-          <li>{move.name} | {version_group_details.at(0).level_learned_at}</li>
-        ))}
-      </ul>
+      {levelUpLearnedMoves && (
+        <List
+          items={levelUpLearnedMoves}
+          renderItem={({ move, version_group_details }, index) => (
+            <ListItem key={index}>
+              {move.name} | {version_group_details.at(0).level_learned_at}
+            </ListItem>
+          )}
+        />
+      )}
       <hr/>
       <div>Learned</div>
       <ul>
