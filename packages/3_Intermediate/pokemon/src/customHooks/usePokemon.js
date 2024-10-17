@@ -10,7 +10,7 @@ async function fetchPokemonById(id) {
 }
 
 function usePokemon(pokemonId) {
-  const [pokemon, setpokemon] = useState(null);
+  const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
     let ignore = false;
@@ -18,7 +18,7 @@ function usePokemon(pokemonId) {
     async function startFetching() {
       const pokemon = await fetchPokemonById(pokemonId);
       if (!ignore) {
-        setpokemon(pokemon);
+        setPokemon(pokemon);
       }
     }
 
