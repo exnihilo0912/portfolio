@@ -1,4 +1,5 @@
 import List, { ListItem } from "../List";
+import PokemonMove from '../PokemonMove';
 
 export default function PokemonMoveList({ pokemon }) {
   const { moves } = pokemon || {};
@@ -21,11 +22,12 @@ export default function PokemonMoveList({ pokemon }) {
       {levelUpLearnedMoves && (
         <List
           items={levelUpLearnedMoves}
-          renderItem={({ move, version_group_details }, index) => (
-            <ListItem key={index} style={{ padding: '0.5rem 1rem', borderBottom: '1px solid hsl(0, 0%, 90%)'}}>
-              <span style={{ textTransform: 'capitalize', fontWeight: '500'}}>{move.name}</span>
-              &nbsp;
-              <small style={{ color: 'hsl(0, 0%, 50%)'}}>Lv. {version_group_details.at(0).level_learned_at}</small>
+          renderItem={(move, index) => (
+            <ListItem
+              key={index}
+              style={{ padding: '0.5rem 1rem', borderBottom: '1px solid hsl(0, 0%, 90%)' }}
+            >
+                <PokemonMove move={move} />
             </ListItem>
           )}
         />

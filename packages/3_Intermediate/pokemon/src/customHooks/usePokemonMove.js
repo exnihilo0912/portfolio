@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const pokeApiRootURL = 'https://pokeapi.co/api/v2';
-const pokemonMoveURL = `${pokeApiRootURL}/move"`;
+const pokemonMoveURL = `${pokeApiRootURL}/move`;
 
 async function fetchPokemonById(id) {
   const result = await fetch(`${pokemonMoveURL}/${id}`);
