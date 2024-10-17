@@ -22,7 +22,7 @@ export const typeDetailByTypeName = {
   ghost: { icon: '☳', backgroundColor: '#7b62a3', color: 'white' },
 };
 
-export default function PokemonType({ type }) {
+export default function PokemonType({ type, size = 'normal' }) {
   const {
     backgroundColor,
     icon,
@@ -34,12 +34,23 @@ export default function PokemonType({ type }) {
       color: 'white',
     });
 
-  return (
-    <Tag>
-      <Chip background={backgroundColor}>{icon}</Chip>
-      <span style={{ textTransform: 'capitalize' }}>
-        {type || 'Unknown'}
-      </span>
-    </Tag>
-  );
+  const renderBySize = {
+    tiny: (<Chip background={backgroundColor}>{icon}</Chip>),
+    small: (
+      <Tag style={{ background: backgroundColor }}>
+        <span style={{ textTransform: 'capitalize', color: 'white' }}>
+          {type || 'Unknown'}
+        </span>
+      </Tag>),
+    normal: (
+      <Tag style={{ paddingLeft: '3px' }}>
+        <Chip background={backgroundColor}>{icon}</Chip>
+        <span style={{ textTransform: 'capitalize' }}>
+          {type || 'Unknown'}
+        </span>
+      </Tag>
+    ),
+  }
+
+  return renderBySize[size];
 }

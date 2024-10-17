@@ -1,7 +1,7 @@
 import './Tag.css';
 
-export default function Tag({ children }) {
+export default function Tag({ children, ...props }) {
   return (
-    <div className="tag">{children}</div>
+    <div className="tag" {...props}>{children}</div>
   );
 }
