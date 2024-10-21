@@ -1,4 +1,4 @@
-import List, { ListItem } from "../List";
+import List, { ListItem } from "../List/index.tsx";
 import PokemonMove from '../PokemonMove';
 
 export default function PokemonMoveList({ pokemon }) {
