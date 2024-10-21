@@ -1,7 +1,7 @@
 import './PokemonCard.css';
 
 import usePokemon from '../../customHooks/usePokemon';
-import PokemonType, { typeDetailByTypeName } from '../PokemonType';
+import PokemonType, { typeDetailByTypeName } from '../PokemonType/index.tsx';
 
 export default function PokemonCard({ id }) {
   const pokemon = usePokemon(id)

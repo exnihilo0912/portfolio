@@ -1,5 +1,13 @@
+import React from 'react';
+
 import Chip from "../Chip";
 import Tag from "../Tag";
+
+interface PokemonTypeDetail {
+  icon: string;
+  backgroundColor: string;
+  color: string;
+}
 
 export const typeDetailByTypeName = {
   fire: { icon: '☲', backgroundColor: '#F19C54', color: 'white' },
@@ -22,7 +30,30 @@ export const typeDetailByTypeName = {
   ghost: { icon: '☳', backgroundColor: '#7b62a3', color: 'white' },
 };
 
-export default function PokemonType({ type, size = 'normal' }) {
+interface PokemonTypeProps {
+  type:
+    | 'fire'
+    | 'water'
+    | 'grass'
+    | 'dragon'
+    | 'normal'
+    | 'flying'
+    | 'poison'
+    | 'electric'
+    | 'dark'
+    | 'bug'
+    | 'ground'
+    | 'fairy'
+    | 'fighting'
+    | 'psychic'
+    | 'rock'
+    | 'steel'
+    | 'ice'
+    | 'ghost';
+  size?: 'tiny' | 'small' | 'normal';
+}
+
+export default function PokemonType({ type, size = 'normal' }: PokemonTypeProps) {
   const {
     backgroundColor,
     icon,

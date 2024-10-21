@@ -1,4 +1,4 @@
-import PokemonType from '../PokemonType';
+import PokemonType from '../PokemonType/index.tsx';
 
 import usePokemonMove from '../../customHooks/usePokemonMove';
 
