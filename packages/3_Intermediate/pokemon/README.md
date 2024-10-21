@@ -95,7 +95,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   - [ ] Add [Post CSS](https://create-react-app.dev/docs/post-processing-css)
 - [ ] Add [Code Splitting](https://create-react-app.dev/docs/code-splitting)
 - [ ] Add [TypeScript](https://create-react-app.dev/docs/adding-typescript)
-- [ ] Add GraphQL ([Relay](https://create-react-app.dev/docs/adding-relay)) and network/route optimization
+- [ ] Add GraphQL (Apollo client) and network/route optimization
 - [ ] Add [Authentication](https://dev.to/hramonpereira/how-to-manage-user-authentication-in-reactjs-nextjs-vuejs-and-nuxtjs-using-clerk-136l?context=digest)
 - [ ] Add profile & [session](https://www.sitepoint.com/react-cookies-sessions/)
 - [ ] Add user favorite and [data save](https://github.com/orgs/react-hook-form/discussions/9910#discussioncomment-9250882) per user
