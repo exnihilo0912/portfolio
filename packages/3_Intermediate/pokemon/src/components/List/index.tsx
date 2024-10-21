@@ -1,7 +1,13 @@
 import React from 'react';
 import './List.css';
 
-function List({ children, items, renderItem, ...props }) {
+interface ListProps {
+  children?: React.ReactNode;
+  items?: Array<any>;
+  renderItem?: Function;
+}
+
+function List({ children, items, renderItem, ...props }: ListProps) {
   return (
     <ul {...props}>
       {
@@ -19,7 +25,11 @@ function List({ children, items, renderItem, ...props }) {
   );
 }
 
-function ListItem({ children, ...props }) {
+interface ListItemProps {
+  children: React.ReactNode;
+}
+
+function ListItem({ children, ...props }: ListItemProps) {
   return (
     <li {...props}>{children}</li>
   );
