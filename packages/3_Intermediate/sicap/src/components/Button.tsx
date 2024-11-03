@@ -10,7 +10,7 @@ interface ButtonProps {
 }
 
 const StyledButton = styled.button`
-  width: 100%;
+  max-width: 100%;
 `;
 
 export default function Button({ children, type, name, disabled }: ButtonProps) {
