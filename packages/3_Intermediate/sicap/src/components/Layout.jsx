@@ -29,6 +29,20 @@ const StyledSideMenu = styled.div`
   padding: 0.4rem;
   border-radius: 5px 0 0 5px;
 `;
+const StyledList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+`;
+const StyledListItem = styled.li`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+`;
 
 function Layout() {
   return (
@@ -37,9 +51,17 @@ function Layout() {
       <StyledSideMenu>
         <Button>TGL</Button>
         <hr/>
-        <Button>ZOM</Button>
-        <Button>DRK</Button>
-        <Button>RST</Button>
+        <StyledList>
+          <StyledListItem>
+            <Button>ZOM</Button>
+          </StyledListItem>
+          <StyledListItem>
+            <Button>DRK</Button>
+          </StyledListItem>
+          <StyledListItem>
+            <Button>RST</Button>
+          </StyledListItem>
+        </StyledList>
       </StyledSideMenu>
       <StyledContent>
         <Outlet />
