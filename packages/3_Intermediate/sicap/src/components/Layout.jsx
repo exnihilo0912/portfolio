@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Button from './Button.tsx';
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
+import SquareButton from './SquareButton.tsx';
 
 const StyledLayout = styled.div`
   background-color: white;
@@ -18,7 +19,7 @@ const StyledContent = styled.div`
   overflow-y: scroll;
 `;
 const StyledSideMenu = styled.div`
-  background: lightgrey;
+  background: hsl(0, 0%, 97%);
   width: 50px;
   height: auto;
   position: fixed;
@@ -28,6 +29,7 @@ const StyledSideMenu = styled.div`
   flex-direction: column;
   padding: 0.4rem;
   border-radius: 5px 0 0 5px;
+  border: 2px solid hsl(0, 0%, 92%);
 `;
 const StyledList = styled.ul`
   display: flex;
@@ -35,6 +37,7 @@ const StyledList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 0.3rem;
   width: 100%;
 `;
 const StyledListItem = styled.li`
@@ -49,17 +52,18 @@ function Layout() {
     <StyledLayout>
       <PageHeader />
       <StyledSideMenu>
-        <Button>TGL</Button>
-        <hr/>
         <StyledList>
           <StyledListItem>
-            <Button>ZOM</Button>
+            <SquareButton>TGL</SquareButton>
           </StyledListItem>
           <StyledListItem>
-            <Button>DRK</Button>
+            <SquareButton>Z</SquareButton>
           </StyledListItem>
           <StyledListItem>
-            <Button>RST</Button>
+            <SquareButton>DRK</SquareButton>
+          </StyledListItem>
+          <StyledListItem>
+            <SquareButton>RST</SquareButton>
           </StyledListItem>
         </StyledList>
       </StyledSideMenu>

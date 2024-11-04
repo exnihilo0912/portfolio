@@ -1,9 +1,9 @@
 import Page from '../components/Page'
 
-export default function LandingPage() {
+export default function DashboardPage() {
   return (
     <Page>
-      <h1>Landing Page</h1>
+      <h1>Dashboard</h1>
     </Page>
   );
 }

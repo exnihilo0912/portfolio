@@ -10,7 +10,9 @@ import reportWebVitals from './reportWebVitals';
 
 import Layout from './components/Layout';
 import ErrorPage from './routes/error';
+import DashboardPage from './routes/DashboardPage';
 import LandingPage from './routes/LandingPage';
+import SignInPage from './routes/SignInPage';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <LandingPage />
+      },
+      {
+        path: 'sign-in/',
+        element: <SignInPage />
+      },
+      {
+        path: 'dashboard/',
+        element: <DashboardPage />
       },
     ]
   },
