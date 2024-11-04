@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from './Button.tsx';
+import Button, { ButtonProps } from './Button.tsx';
 
 const StyledButton = styled(Button)`
   border: none;
@@ -15,6 +15,6 @@ const StyledButton = styled(Button)`
   align-items: center;
 `;
 
-export default function SquareButton({ children }) {
+export default function SquareButton({ children }: ButtonProps) {
   return (<StyledButton>{children}</StyledButton>);
 }

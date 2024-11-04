@@ -33,3 +33,5 @@ export default function Button(buttonProps: ButtonProps) {
     </StyledButton>
   );
 }
+
+export { ButtonProps };

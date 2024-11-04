@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import styled from 'styled-components';
 
-import Button from './Button.tsx';
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
 import SquareButton from './SquareButton.tsx';
