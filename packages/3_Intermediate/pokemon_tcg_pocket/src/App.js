@@ -2,6 +2,59 @@ import './App.css';
 
 import React, { useState } from 'react';
 
+const basePokemonCard = {
+  id: 1, // Global ID
+  name: '',
+  type: '',
+  hp: 0,
+  stage: 0, // base(0) | 1 | 2
+  rarity: '', // 1 diamond, 2 diamonds, 3 diamond, 4 diamond, 1 star, 2 stars, 3 stars, 1 crown
+  weakness: {
+    type: '',
+    amount: 0,
+  },
+  retreat: [
+    {
+      type: '',
+      count: 0,
+    },
+  ], 
+  description: '', //
+  moves: [
+    {
+      energies: [
+        {
+          type: '',
+          amount: 1,
+        }
+      ],
+      name: '',
+      hitPoint: 0,
+      hitPointModifier: '', // + | * | null
+      effect: '',
+    },
+  ],
+  ability: {
+    flavorText: '',
+  },
+  booster: {
+    id: '',
+    name: '',
+    series: ['A'],
+    index: 1,
+    cardTotal: 226,
+  },
+  illustrator: '', // name/illustrator id
+  relatedCardIds: [],
+};
+
+const playerPokemonCards = [
+  {
+    id: 1,
+    count: 1,
+  }
+]
+
 function CardCollection({ cards }) {
   return (
     <div className='pokemon-card-collection'>
