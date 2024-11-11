@@ -75,6 +75,11 @@ const playerPokemonCards = [
   }
 ]
 
+const stageNameByIndex = {
+  '0': 'basic',
+  '1': 'stage 1',
+  '2': 'stage 2',
+};
 function CardCollection({ cards }) {
   return (
     <div className='pokemon-card-collection'>
@@ -94,9 +99,31 @@ function SlotCardCollection({ cards }) {
     <div className='pokemon-card-collection pokemon-card-collection--slot'>
       {cards.map((card, index) => (
         <article className='pokemon-card-collection__card pokemon-card-collection__card--slot'>
-          <p>
-            {String(index + 1).padStart(3, '0')}
-          </p>
+          {
+            card
+              ? (
+                <div className='pokemon-card'>
+                  <div className='pokemon-card__border'>
+                    <div className='pokemon-card__content'>
+                      <header className='pokemon-card__header'>
+                        <div className='pokemon-card__header__stage'>{stageNameByIndex[card.stage]}</div>
+                        <div className='pokemon-card__header__name'>{card.name}</div>
+                        <div className='pokemon-card__header__hp'>HP<span>{card.hp}</span></div>
+                        <div className='pokemon-card__header__type'>⭕️</div>
+                      </header>
+                      <div className='pokemon-card__image'>image</div>
+                      <div className='pokemon-card__moves'>moves</div>
+                      <footer className='pokemon-card__footer'>footer</footer>
+                    </div>
+                  </div>
+                </div>
+              )
+              : (
+                <span>
+                  {String(index + 1).padStart(3, '0')}
+                </span>
+              )
+          }
         </article>
       ))}
     </div>
@@ -106,7 +133,8 @@ function SlotCardCollection({ cards }) {
 
 function App() {
   const [isSlotDisplayMode, setIsSlotDisplay] = useState(false);
-  const cards = Array(246).fill(0);
+  const cards = Array(245).fill(null)
+  cards.unshift(basePokemonCard);
 
   return (
     <div id="layout">
@@ -128,7 +156,7 @@ function App() {
               <span>Display Boards</span>
             </div>
             <div className='card-block__menu__item'>
-              <div>⓷</div>
+              <div>③</div>
               <span>Decks</span>
             </div>
           </div>
