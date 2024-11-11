@@ -3,49 +3,69 @@ import './App.css';
 import React, { useState } from 'react';
 
 const basePokemonCard = {
-  id: 1, // Global ID
-  name: '',
-  type: '',
-  hp: 0,
+  id: 4, // Global ID
+  name: 'bulbasaur',
+  translatedNames: [
+    {
+      languageCode: 'en-en',
+      name: 'bulbasaur',
+    },
+    {
+      languageCode: 'fr-fr',
+      name: 'bulbizare',
+    },
+  ],
+  type: 'grass',
+  hp: 70,
   stage: 0, // base(0) | 1 | 2
-  rarity: '', // 1 diamond, 2 diamonds, 3 diamond, 4 diamond, 1 star, 2 stars, 3 stars, 1 crown
+  rarity: '1D', // 1 diamond, 2 diamonds, 3 diamond, 4 diamond, 1 star, 2 stars, 3 stars, 1 crown
   weakness: {
-    type: '',
-    amount: 0,
+    type: 'fire',
+    amount: 20,
   },
   retreat: [
     {
-      type: '',
-      count: 0,
+      type: 'normal',
+      count: 1,
     },
-  ], 
-  description: '', //
+  ],
+  description: 'There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.', //
   moves: [
     {
       energies: [
         {
-          type: '',
+          type: 'grass',
+          amount: 1,
+        },
+        {
+          type: 'normal',
           amount: 1,
         }
       ],
-      name: '',
-      hitPoint: 0,
-      hitPointModifier: '', // + | * | null
-      effect: '',
+      name: 'vine whip',
+      hitPoint: 40,
+      hitPointModifier: null, // + | * | null
+      effect: null,
     },
   ],
   ability: {
-    flavorText: '',
+    id: null,
+    name: null,
+    flavorText: null,
   },
+  series: ['A'],
   booster: {
-    id: '',
-    name: '',
-    series: ['A'],
+    id: 2,
+    name: 'mewtwo',
+    familyName: 'genetic apex',
     index: 1,
     cardTotal: 226,
   },
-  illustrator: '', // name/illustrator id
-  relatedCardIds: [],
+  illustrator: {
+    id: 1,
+    name: 'Narumi Sato'
+  }, // name/illustrator id
+  relatedCardIds: [2, 3, 4, 227, 251],
 };
 
 const playerPokemonCards = [
@@ -59,19 +79,34 @@ function CardCollection({ cards }) {
   return (
     <div className='pokemon-card-collection'>
       {cards.map((card, index) => (
-        <article className='pokemon-card-collection__card'>{index + 1}</article>
+        <article className='pokemon-card-collection__card'>
+          <p>
+            {index + 1}
+            <p>Enforce the card ration</p>
+          </p>
+        </article>
       ))}
     </div>
   );
 }
-function SlotCardCollection() {
-  return (<div>slot display mode</div>);
+function SlotCardCollection({ cards }) {
+  return (
+    <div className='pokemon-card-collection pokemon-card-collection--slot'>
+      {cards.map((card, index) => (
+        <article className='pokemon-card-collection__card pokemon-card-collection__card--slot'>
+          <p>
+            {index + 1}
+          </p>
+        </article>
+      ))}
+    </div>
+  );
 }
 
 
 function App() {
   const [isSlotDisplayMode, setIsSlotDisplay] = useState(false);
-  const cards = [1, 2, 3, 4, 5];
+  const cards = [basePokemonCard, 2, 3, 4, 5, 6, 7, 8];
 
   return (
     <div id="layout">

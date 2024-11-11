@@ -178,3 +178,18 @@ body,
   background-color: lightgrey;
   border-radius: 8px;
 }
+
+.pokemon-card-collection.pokemon-card-collection--slot {
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.pokemon-card-collection__card.pokemon-card-collection__card--slot {
+  flex-basis: 20%;
+  height: 50px;
+  border-radius: 8px;
+  box-shadow: inset 2px 1px 1px hsla(0, 0%, 0%, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
