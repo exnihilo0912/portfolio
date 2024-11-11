@@ -95,7 +95,7 @@ function SlotCardCollection({ cards }) {
       {cards.map((card, index) => (
         <article className='pokemon-card-collection__card pokemon-card-collection__card--slot'>
           <p>
-            {index + 1}
+            {String(index + 1).padStart(3, '0')}
           </p>
         </article>
       ))}
@@ -106,7 +106,7 @@ function SlotCardCollection({ cards }) {
 
 function App() {
   const [isSlotDisplayMode, setIsSlotDisplay] = useState(false);
-  const cards = [basePokemonCard, 2, 3, 4, 5, 6, 7, 8];
+  const cards = Array(246).fill(0);
 
   return (
     <div id="layout">
