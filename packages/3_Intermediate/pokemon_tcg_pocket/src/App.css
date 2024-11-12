@@ -178,6 +178,15 @@ body,
   padding: 2px 5px 2px 5px;
 }
 
+.button {
+  border: none;
+  background-color: transparent;
+}
+
+.button--large-text {
+  font-size: 1.5rem;
+}
+
 /* ------------- */
 
 .separator--vertical {

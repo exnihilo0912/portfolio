@@ -2,7 +2,10 @@ import './App.css';
 
 import React, { useState } from 'react';
 
+import IconButton from './components/IconButton';
 import PokemonCard from './components/PokemonCard';
+import SkewButton from './components/SkewButton';
+import SwitchInput from './components/SwitchInput';
 
 const basePokemonCard = {
   id: 1, // Global ID
@@ -140,18 +143,18 @@ function App() {
       <main className="body">
         <div class="card-block">
           <div className="card-block__menu">
-            <div className='card-block__menu__item'>
-              <div>①</div>
-              <span>Binders</span>
-            </div>
-            <div className='card-block__menu__item'>
-              <div>②</div>
-              <span>Display Boards</span>
-            </div>
-            <div className='card-block__menu__item'>
-              <div>③</div>
-              <span>Decks</span>
-            </div>
+            <SkewButton
+              top="①"
+              bottom="Binders"
+            />
+            <SkewButton
+              top="②"
+              bottom="Display Boards"
+            />
+            <SkewButton
+              top="③"
+              bottom="Decks"
+            />
           </div>
           <div className="card-block__sub-menu">
             <div>
@@ -160,14 +163,16 @@ function App() {
             </div>
             <div className='flex flex--centered'>
               <div className='flex flex--centered'>
-                <span>switch</span>
-                <input
-                  type='checkbox'
+                <SwitchInput
+                  label="Switch"
+                  name="switchDisplay"
                   onClick={() => setIsSlotDisplay((prevValue) => !prevValue)}
                 />
               </div>
               <div className='separator--vertical'></div>
-              <div>🔎</div>
+              <div>
+                <IconButton />
+              </div>
             </div>
           </div>
         </div>
