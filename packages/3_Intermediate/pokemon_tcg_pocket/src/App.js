@@ -3,7 +3,8 @@ import './App.css';
 import React, { useState } from 'react';
 
 const basePokemonCard = {
-  id: 4, // Global ID
+  id: 1, // Global ID
+  nationalDexIndex: 1,
   name: 'bulbasaur',
   translatedNames: [
     {
@@ -111,7 +112,15 @@ function SlotCardCollection({ cards }) {
                         <div className='pokemon-card__header__hp'>HP<span>{card.hp}</span></div>
                         <div className='pokemon-card__header__type'>⭕️</div>
                       </header>
-                      <div className='pokemon-card__image'>image</div>
+                      <div className='pokemon-card__image-container'>
+                        <div className='pokemon-card__image'></div>
+                        <div className='pokemon-card__desc'>
+                          <span>NO {String(card.nationalDexIndex).padStart(4, '0')}</span>
+                          &nbsp;<span>pokemon family</span>
+                          &nbsp;<span>HT 2'4"</span>
+                          &nbsp;<span>WT 15.2 lbs</span>
+                        </div>
+                      </div>
                       <div className='pokemon-card__moves'>moves</div>
                       <footer className='pokemon-card__footer'>footer</footer>
                     </div>
