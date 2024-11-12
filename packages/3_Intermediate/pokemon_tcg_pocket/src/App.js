@@ -121,7 +121,29 @@ function SlotCardCollection({ cards }) {
                           &nbsp;<span>WT 15.2 lbs</span>
                         </div>
                       </div>
-                      <div className='pokemon-card__moves'>moves</div>
+                      <div className='pokemon-card__moves'>
+                        <ul className='pokemon-card_move-list'>
+                          {card.moves.map((move) => (
+                            <li className='pokemon-card_move-list__item'>
+                              <div className='flex flex--tight'>
+                                {
+                                  move.energies.map((energy) => (
+                                    <ul className='flex flex--tight'>
+                                      {Array(energy.amount).fill(0).map((energyLogo, energyLogoIndex) => (
+                                        <li key={energyLogoIndex}>
+                                          <span>🍁</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ))
+                                }
+                              </div>
+                              <div>{move.name}</div>
+                              <div>{move.hitPoint}</div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                       <footer className='pokemon-card__footer'>footer</footer>
                     </div>
                   </div>
