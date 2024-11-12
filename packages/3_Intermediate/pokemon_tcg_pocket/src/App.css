@@ -156,13 +156,26 @@ body,
   gap: 0;
 }
 
-.flex .flex--centered {
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--centered {
   justify-content: center;
   align-items: center;
 }
 
+.flex--space-between {
+  justify-content: space-between;
+}
+
 .text--capitalize {
   text-transform: capitalize;
+}
+
+.tag {
+  background-color: hsl(0, 0%, 85%);
+  padding: 2px 5px 2px 5px;
 }
 
 /* ------------- */
@@ -238,7 +251,7 @@ body,
   position: relative;
   left: -10px;
   right: 10px;
-  width: 110%;
+  width: 105%;
   display: flex;
   align-items: baseline;
   gap: 1px;
