@@ -4,7 +4,12 @@ import React, { useState } from 'react';
 
 const basePokemonCard = {
   id: 1, // Global ID
-  nationalDexIndex: 1,
+  pokemon: {
+    nationalDexIndex: 1,
+    height: `2'4"`,
+    weight: 15.2,
+    specie: 'seed pokemon',
+  },
   name: 'bulbasaur',
   translatedNames: [
     {
@@ -115,10 +120,10 @@ function SlotCardCollection({ cards }) {
                       <div className='pokemon-card__image-container'>
                         <div className='pokemon-card__image'></div>
                         <div className='pokemon-card__desc'>
-                          <span>NO {String(card.nationalDexIndex).padStart(4, '0')}</span>
-                          &nbsp;<span>pokemon family</span>
-                          &nbsp;<span>HT 2'4"</span>
-                          &nbsp;<span>WT 15.2 lbs</span>
+                          <span>NO {String(card.pokemon.nationalDexIndex).padStart(4, '0')}</span>
+                          &nbsp;<span className='text text--capitalize'>{card.pokemon.specie}</span>
+                          &nbsp;<span>HT {card.pokemon.height}</span>
+                          &nbsp;<span>WT {card.pokemon.weight} lbs</span>
                         </div>
                       </div>
                       <div className='pokemon-card__moves'>
