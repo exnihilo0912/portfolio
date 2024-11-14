@@ -29,7 +29,10 @@ const basePokemonCard = {
   type: 'grass',
   hp: 70,
   stage: 0, // base(0) | 1 | 2
-  rarity: '1D', // 1 diamond, 2 diamonds, 3 diamond, 4 diamond, 1 star, 2 stars, 3 stars, 1 crown
+  rarity: {
+    id: 1,
+    symbol: '⬥',
+  },
   weakness: {
     type: 'fire',
     amount: 20,

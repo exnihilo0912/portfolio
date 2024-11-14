@@ -176,6 +176,8 @@ body,
 .tag {
   background-color: hsl(0, 0%, 85%);
   padding: 2px 5px 2px 5px;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .button {
@@ -185,6 +187,10 @@ body,
 
 .button--large-text {
   font-size: 1.5rem;
+}
+
+.text--xxs {
+  font-size: 0.4rem;
 }
 
 /* ------------- */
@@ -344,6 +350,19 @@ body,
   font-weight: bold;
 }
 
+.pokemon-card__footer__bottom {
+  font-size: 0.4rem;
+  padding-top: 3px;
+}
+
+.pokemon-card__description {
+  font-size: 0.4rem;
+  max-width: 50%;
+}
+
+.pokemon-card__rarity {
+  font-size: 0.7rem;
+}
 
 .pokemon-card_move-list__item>div:nth-of-type(2) {
   flex: 2;

@@ -1,3 +1,5 @@
+import Tag from './Tag';
+
 
 const stageNameByIndex = {
   '0': 'basic',
@@ -50,15 +52,15 @@ export default function PokemonCard({ card }) {
           </div>
           <footer className='pokemon-card__footer'>
             <div className="flex flex--space-between">
-              <div>weakness</div>
-              <div>retreat</div>
+              <Tag fullWidth>weakness</Tag>
+              <Tag fullWidth>retreat</Tag>
             </div>
-            <div className="flex flex--space-between">
+            <div className="pokemon-card__footer__bottom  flex flex--space-between">
               <div>
                 <div>Ill. {card.illustrator.name}</div>
-                <div>rarity</div>
+                <div className='pokemon-card__rarity'>{ card.rarity.symbol }</div>
               </div>
-              <div>description</div>
+              <div className='pokemon-card__description text text--xxs'>{ card.description }</div>
             </div>
           </footer>
         </div>
