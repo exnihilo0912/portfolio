@@ -1,0 +1,845 @@
+[
+  {
+    "descriptions": [
+      {
+        "description": "Appris lorsqu’un Pokémon atteint un certain niveau.",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        }
+      },
+      {
+        "description": "Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht.",
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        }
+      },
+      {
+        "description": "Se aprende cuando un pokemon alcanza un cierto nivel.",
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        }
+      },
+      {
+        "description": "Learned when a Pokémon reaches a certain level.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 1,
+    "name": "level-up",
+    "names": [
+      {
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Montée de niveau"
+      },
+      {
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        },
+        "name": "Level up"
+      },
+      {
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        },
+        "name": "Nivel"
+      },
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Level up"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "red-blue",
+        "url": "https://pokeapi.co/api/v2/version-group/1/"
+      },
+      {
+        "name": "yellow",
+        "url": "https://pokeapi.co/api/v2/version-group/2/"
+      },
+      {
+        "name": "gold-silver",
+        "url": "https://pokeapi.co/api/v2/version-group/3/"
+      },
+      {
+        "name": "crystal",
+        "url": "https://pokeapi.co/api/v2/version-group/4/"
+      },
+      {
+        "name": "ruby-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/5/"
+      },
+      {
+        "name": "emerald",
+        "url": "https://pokeapi.co/api/v2/version-group/6/"
+      },
+      {
+        "name": "firered-leafgreen",
+        "url": "https://pokeapi.co/api/v2/version-group/7/"
+      },
+      {
+        "name": "diamond-pearl",
+        "url": "https://pokeapi.co/api/v2/version-group/8/"
+      },
+      {
+        "name": "platinum",
+        "url": "https://pokeapi.co/api/v2/version-group/9/"
+      },
+      {
+        "name": "heartgold-soulsilver",
+        "url": "https://pokeapi.co/api/v2/version-group/10/"
+      },
+      {
+        "name": "black-white",
+        "url": "https://pokeapi.co/api/v2/version-group/11/"
+      },
+      {
+        "name": "colosseum",
+        "url": "https://pokeapi.co/api/v2/version-group/12/"
+      },
+      {
+        "name": "xd",
+        "url": "https://pokeapi.co/api/v2/version-group/13/"
+      },
+      {
+        "name": "black-2-white-2",
+        "url": "https://pokeapi.co/api/v2/version-group/14/"
+      },
+      {
+        "name": "x-y",
+        "url": "https://pokeapi.co/api/v2/version-group/15/"
+      },
+      {
+        "name": "omega-ruby-alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/16/"
+      },
+      {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+      },
+      {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+      },
+      {
+        "name": "lets-go-pikachu-lets-go-eevee",
+        "url": "https://pokeapi.co/api/v2/version-group/19/"
+      },
+      {
+        "name": "sword-shield",
+        "url": "https://pokeapi.co/api/v2/version-group/20/"
+      }
+    ]
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Apparaît à l’éclosion d’un œuf de Pokémon, si le père connaît ce mouvement.",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        }
+      },
+      {
+        "description": "Erscheint bei einem frisch geschlüpften Pokémon, wenn der Vater die selbe Fähigkeit hatte.",
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        }
+      },
+      {
+        "description": "Aparece en un Pokémon recién nacido, si el padre tuvo el mismo movimiento.",
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        }
+      },
+      {
+        "description": "Appears on a newly-hatched Pokémon, if the father had the same move.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 2,
+    "name": "egg",
+    "names": [
+      {
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Œuf"
+      },
+      {
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        },
+        "name": "Ei"
+      },
+      {
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        },
+        "name": "Huevo"
+      },
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Egg"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "gold-silver",
+        "url": "https://pokeapi.co/api/v2/version-group/3/"
+      },
+      {
+        "name": "crystal",
+        "url": "https://pokeapi.co/api/v2/version-group/4/"
+      },
+      {
+        "name": "ruby-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/5/"
+      },
+      {
+        "name": "emerald",
+        "url": "https://pokeapi.co/api/v2/version-group/6/"
+      },
+      {
+        "name": "firered-leafgreen",
+        "url": "https://pokeapi.co/api/v2/version-group/7/"
+      },
+      {
+        "name": "diamond-pearl",
+        "url": "https://pokeapi.co/api/v2/version-group/8/"
+      },
+      {
+        "name": "platinum",
+        "url": "https://pokeapi.co/api/v2/version-group/9/"
+      },
+      {
+        "name": "heartgold-soulsilver",
+        "url": "https://pokeapi.co/api/v2/version-group/10/"
+      },
+      {
+        "name": "black-white",
+        "url": "https://pokeapi.co/api/v2/version-group/11/"
+      },
+      {
+        "name": "black-2-white-2",
+        "url": "https://pokeapi.co/api/v2/version-group/14/"
+      },
+      {
+        "name": "x-y",
+        "url": "https://pokeapi.co/api/v2/version-group/15/"
+      },
+      {
+        "name": "omega-ruby-alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/16/"
+      },
+      {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+      },
+      {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+      },
+      {
+        "name": "sword-shield",
+        "url": "https://pokeapi.co/api/v2/version-group/20/"
+      }
+    ]
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Enseigné par un PNJ",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        }
+      },
+      {
+        "description": "Kann jederzeit von einem NPC erlernt werden.",
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        }
+      },
+      {
+        "description": " Puede ser enseñado en cualquier momento por un NPC.",
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        }
+      },
+      {
+        "description": "Can be taught at any time by an NPC.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 3,
+    "name": "tutor",
+    "names": [
+      {
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Enseigné"
+      },
+      {
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        },
+        "name": "Tutor"
+      },
+      {
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        },
+        "name": "Tutor"
+      },
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Tutor"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "crystal",
+        "url": "https://pokeapi.co/api/v2/version-group/4/"
+      },
+      {
+        "name": "emerald",
+        "url": "https://pokeapi.co/api/v2/version-group/6/"
+      },
+      {
+        "name": "firered-leafgreen",
+        "url": "https://pokeapi.co/api/v2/version-group/7/"
+      },
+      {
+        "name": "diamond-pearl",
+        "url": "https://pokeapi.co/api/v2/version-group/8/"
+      },
+      {
+        "name": "platinum",
+        "url": "https://pokeapi.co/api/v2/version-group/9/"
+      },
+      {
+        "name": "heartgold-soulsilver",
+        "url": "https://pokeapi.co/api/v2/version-group/10/"
+      },
+      {
+        "name": "black-white",
+        "url": "https://pokeapi.co/api/v2/version-group/11/"
+      },
+      {
+        "name": "xd",
+        "url": "https://pokeapi.co/api/v2/version-group/13/"
+      },
+      {
+        "name": "black-2-white-2",
+        "url": "https://pokeapi.co/api/v2/version-group/14/"
+      },
+      {
+        "name": "x-y",
+        "url": "https://pokeapi.co/api/v2/version-group/15/"
+      },
+      {
+        "name": "omega-ruby-alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/16/"
+      },
+      {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+      },
+      {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+      },
+      {
+        "name": "lets-go-pikachu-lets-go-eevee",
+        "url": "https://pokeapi.co/api/v2/version-group/19/"
+      },
+      {
+        "name": "sword-shield",
+        "url": "https://pokeapi.co/api/v2/version-group/20/"
+      }
+    ]
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Peut être appris n’importe quand par une CT ou une CS.",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        }
+      },
+      {
+        "description": "Kann jederzeit durch das benutzen eines TM oder VM erlernt werden.",
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        }
+      },
+      {
+        "description": "Se puede enseñar en cualquier momento usando una MT o MO.",
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        }
+      },
+      {
+        "description": "Can be taught at any time by using a TM or HM.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 4,
+    "name": "machine",
+    "names": [
+      {
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Capsule"
+      },
+      {
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        },
+        "name": "Maschine"
+      },
+      {
+        "language": {
+          "name": "es",
+          "url": "https://pokeapi.co/api/v2/language/7/"
+        },
+        "name": "Máquina"
+      },
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Machine"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "red-blue",
+        "url": "https://pokeapi.co/api/v2/version-group/1/"
+      },
+      {
+        "name": "yellow",
+        "url": "https://pokeapi.co/api/v2/version-group/2/"
+      },
+      {
+        "name": "gold-silver",
+        "url": "https://pokeapi.co/api/v2/version-group/3/"
+      },
+      {
+        "name": "crystal",
+        "url": "https://pokeapi.co/api/v2/version-group/4/"
+      },
+      {
+        "name": "ruby-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/5/"
+      },
+      {
+        "name": "emerald",
+        "url": "https://pokeapi.co/api/v2/version-group/6/"
+      },
+      {
+        "name": "firered-leafgreen",
+        "url": "https://pokeapi.co/api/v2/version-group/7/"
+      },
+      {
+        "name": "diamond-pearl",
+        "url": "https://pokeapi.co/api/v2/version-group/8/"
+      },
+      {
+        "name": "platinum",
+        "url": "https://pokeapi.co/api/v2/version-group/9/"
+      },
+      {
+        "name": "heartgold-soulsilver",
+        "url": "https://pokeapi.co/api/v2/version-group/10/"
+      },
+      {
+        "name": "black-white",
+        "url": "https://pokeapi.co/api/v2/version-group/11/"
+      },
+      {
+        "name": "colosseum",
+        "url": "https://pokeapi.co/api/v2/version-group/12/"
+      },
+      {
+        "name": "xd",
+        "url": "https://pokeapi.co/api/v2/version-group/13/"
+      },
+      {
+        "name": "black-2-white-2",
+        "url": "https://pokeapi.co/api/v2/version-group/14/"
+      },
+      {
+        "name": "x-y",
+        "url": "https://pokeapi.co/api/v2/version-group/15/"
+      },
+      {
+        "name": "omega-ruby-alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/16/"
+      },
+      {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+      },
+      {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+      },
+      {
+        "name": "lets-go-pikachu-lets-go-eevee",
+        "url": "https://pokeapi.co/api/v2/version-group/19/"
+      },
+      {
+        "name": "sword-shield",
+        "url": "https://pokeapi.co/api/v2/version-group/20/"
+      }
+    ]
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Wird gelernt, wenn ein Pikachu dabei hilft den Premium-Cup in der Kategorie Meisterball ohne unterbrechung zu besiegen.  Es muss in jedem Kampf teilnehmen.",
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        }
+      },
+      {
+        "description": "Learned when a non-rental Pikachu helps beat Prime Cup Master Ball R-2.  It must participate in every battle, and you must win with no continues.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 5,
+    "name": "stadium-surfing-pikachu",
+    "names": [
+      {
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        },
+        "name": "Stadium: Surfendes Pikachu"
+      },
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Stadium: Surfing Pikachu"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "red-blue",
+        "url": "https://pokeapi.co/api/v2/version-group/1/"
+      },
+      {
+        "name": "yellow",
+        "url": "https://pokeapi.co/api/v2/version-group/2/"
+      }
+    ]
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Erscheint bei einem Pichu dessen Mutter einen Kugelblitz trug.  Der Vater darf nicht Ditto sein.",
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        }
+      },
+      {
+        "description": "Appears on a Pichu whose mother was holding a Light Ball.  The father cannot be Ditto.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 6,
+    "name": "light-ball-egg",
+    "names": [
+      {
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        },
+        "name": "Volttackle Pichu"
+      },
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Volt Tackle Pichu"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "emerald",
+        "url": "https://pokeapi.co/api/v2/version-group/6/"
+      },
+      {
+        "name": "diamond-pearl",
+        "url": "https://pokeapi.co/api/v2/version-group/8/"
+      },
+      {
+        "name": "platinum",
+        "url": "https://pokeapi.co/api/v2/version-group/9/"
+      },
+      {
+        "name": "heartgold-soulsilver",
+        "url": "https://pokeapi.co/api/v2/version-group/10/"
+      },
+      {
+        "name": "black-white",
+        "url": "https://pokeapi.co/api/v2/version-group/11/"
+      },
+      {
+        "name": "black-2-white-2",
+        "url": "https://pokeapi.co/api/v2/version-group/14/"
+      },
+      {
+        "name": "x-y",
+        "url": "https://pokeapi.co/api/v2/version-group/15/"
+      },
+      {
+        "name": "omega-ruby-alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/16/"
+      },
+      {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+      },
+      {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+      }
+    ]
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Appears on a Shadow Pokémon as it becomes increasingly purified.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 7,
+    "name": "colosseum-purification",
+    "names": [
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Colosseum: Purification"
+      }
+    ],
+    "version_groups": []
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Appears on a Snatched Shadow Pokémon.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 8,
+    "name": "xd-shadow",
+    "names": [
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "XD: Shadow"
+      }
+    ],
+    "version_groups": []
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Appears on a Shadow Pokémon as it becomes increasingly purified.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 9,
+    "name": "xd-purification",
+    "names": [
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "XD: Purification"
+      }
+    ],
+    "version_groups": []
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Erscheint, wenn Rotom seine Form wechselt.  Verschwindet wenn Rotom eine andere Form an nimmt. Diese Fähigkeit kann nur durch wechseln der Form erlernt werden.",
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        }
+      },
+      {
+        "description": "Appears when Rotom or Cosplay Pikachu changes form.  Disappears if the Pokémon becomes another form and this move can only be learned by form change.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 10,
+    "name": "form-change",
+    "names": [
+      {
+        "language": {
+          "name": "de",
+          "url": "https://pokeapi.co/api/v2/language/6/"
+        },
+        "name": "Rotom Formen"
+      },
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Form Change"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "platinum",
+        "url": "https://pokeapi.co/api/v2/version-group/9/"
+      },
+      {
+        "name": "heartgold-soulsilver",
+        "url": "https://pokeapi.co/api/v2/version-group/10/"
+      },
+      {
+        "name": "black-white",
+        "url": "https://pokeapi.co/api/v2/version-group/11/"
+      },
+      {
+        "name": "black-2-white-2",
+        "url": "https://pokeapi.co/api/v2/version-group/14/"
+      },
+      {
+        "name": "x-y",
+        "url": "https://pokeapi.co/api/v2/version-group/15/"
+      },
+      {
+        "name": "omega-ruby-alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version-group/16/"
+      },
+      {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+      },
+      {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+      },
+      {
+        "name": "sword-shield",
+        "url": "https://pokeapi.co/api/v2/version-group/20/"
+      }
+    ]
+  },
+  {
+    "descriptions": [
+      {
+        "description": "Can be taught using the Zygarde Cube.  Must find the corresponding Zygarde Core first in Sun/Moon.  All moves are available immediately in Ultra Sun/Ultra Moon.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 11,
+    "name": "zygarde-cube",
+    "names": [
+      {
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Zygarde Cube"
+      }
+    ],
+    "version_groups": [
+      {
+        "name": "sun-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/17/"
+      },
+      {
+        "name": "ultra-sun-ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version-group/18/"
+      }
+    ]
+  }
+]

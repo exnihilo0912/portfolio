@@ -218,4 +218,26 @@ async function fetchAll() {
   fs.writeFileSync(`${__dirname}/data/allResources.json`, JSON.stringify(entityObjs));
 }
 
-fetchAll();
+// fetchAll();
+
+async function fetchAllEntities() {
+  const allResources = require('./data/allResources.json');
+  for (const resource of allResources) {
+    const { name, count, itemUrls } = resource;
+    console.log({
+      name,
+      itemUrls,
+    });
+
+    const entities = [];
+    for (const itemUrl of itemUrls) {
+      const result = await fetch(itemUrl);
+      const entity = await result.json();
+      console.log(itemUrl);
+      entities.push(entity);
+    }
+    fs.writeFileSync(`${__dirname}/data/${name}.json`, JSON.stringify(entities));
+  }
+}
+
+fetchAllEntities();

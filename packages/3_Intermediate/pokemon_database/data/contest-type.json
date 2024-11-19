@@ -1,0 +1,252 @@
+[
+  {
+    "berry_flavor": {
+      "name": "spicy",
+      "url": "https://pokeapi.co/api/v2/berry-flavor/1/"
+    },
+    "id": 1,
+    "name": "cool",
+    "names": [
+      {
+        "color": "",
+        "language": {
+          "name": "ja-Hrkt",
+          "url": "https://pokeapi.co/api/v2/language/1/"
+        },
+        "name": "かっこよさ"
+      },
+      {
+        "color": "紅",
+        "language": {
+          "name": "zh-Hant",
+          "url": "https://pokeapi.co/api/v2/language/4/"
+        },
+        "name": "帥氣"
+      },
+      {
+        "color": "Rouge",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Sang-froid"
+      },
+      {
+        "color": "Red",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Cool"
+      },
+      {
+        "color": "红",
+        "language": {
+          "name": "zh-Hans",
+          "url": "https://pokeapi.co/api/v2/language/12/"
+        },
+        "name": "帅气"
+      }
+    ]
+  },
+  {
+    "berry_flavor": {
+      "name": "dry",
+      "url": "https://pokeapi.co/api/v2/berry-flavor/2/"
+    },
+    "id": 2,
+    "name": "beauty",
+    "names": [
+      {
+        "color": "",
+        "language": {
+          "name": "ja-Hrkt",
+          "url": "https://pokeapi.co/api/v2/language/1/"
+        },
+        "name": "うつくしさ"
+      },
+      {
+        "color": "藍",
+        "language": {
+          "name": "zh-Hant",
+          "url": "https://pokeapi.co/api/v2/language/4/"
+        },
+        "name": "美麗"
+      },
+      {
+        "color": "Bleu",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Beauté"
+      },
+      {
+        "color": "Blue",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Beauty"
+      },
+      {
+        "color": "蓝",
+        "language": {
+          "name": "zh-Hans",
+          "url": "https://pokeapi.co/api/v2/language/12/"
+        },
+        "name": "美丽"
+      }
+    ]
+  },
+  {
+    "berry_flavor": {
+      "name": "sweet",
+      "url": "https://pokeapi.co/api/v2/berry-flavor/3/"
+    },
+    "id": 3,
+    "name": "cute",
+    "names": [
+      {
+        "color": "",
+        "language": {
+          "name": "ja-Hrkt",
+          "url": "https://pokeapi.co/api/v2/language/1/"
+        },
+        "name": "かわいさ"
+      },
+      {
+        "color": "粉紅",
+        "language": {
+          "name": "zh-Hant",
+          "url": "https://pokeapi.co/api/v2/language/4/"
+        },
+        "name": "可愛"
+      },
+      {
+        "color": "Rose",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Grâce"
+      },
+      {
+        "color": "Pink",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Cute"
+      },
+      {
+        "color": "粉红",
+        "language": {
+          "name": "zh-Hans",
+          "url": "https://pokeapi.co/api/v2/language/12/"
+        },
+        "name": "可爱"
+      }
+    ]
+  },
+  {
+    "berry_flavor": {
+      "name": "bitter",
+      "url": "https://pokeapi.co/api/v2/berry-flavor/4/"
+    },
+    "id": 4,
+    "name": "smart",
+    "names": [
+      {
+        "color": "",
+        "language": {
+          "name": "ja-Hrkt",
+          "url": "https://pokeapi.co/api/v2/language/1/"
+        },
+        "name": "かしこさ"
+      },
+      {
+        "color": "綠",
+        "language": {
+          "name": "zh-Hant",
+          "url": "https://pokeapi.co/api/v2/language/4/"
+        },
+        "name": "聰明"
+      },
+      {
+        "color": "Vert",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Intelligence"
+      },
+      {
+        "color": "Green",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Smart"
+      },
+      {
+        "color": "绿",
+        "language": {
+          "name": "zh-Hans",
+          "url": "https://pokeapi.co/api/v2/language/12/"
+        },
+        "name": "聪明"
+      }
+    ]
+  },
+  {
+    "berry_flavor": {
+      "name": "sour",
+      "url": "https://pokeapi.co/api/v2/berry-flavor/5/"
+    },
+    "id": 5,
+    "name": "tough",
+    "names": [
+      {
+        "color": "",
+        "language": {
+          "name": "ja-Hrkt",
+          "url": "https://pokeapi.co/api/v2/language/1/"
+        },
+        "name": "たくましさ"
+      },
+      {
+        "color": "黃",
+        "language": {
+          "name": "zh-Hant",
+          "url": "https://pokeapi.co/api/v2/language/4/"
+        },
+        "name": "強壯"
+      },
+      {
+        "color": "Jaune",
+        "language": {
+          "name": "fr",
+          "url": "https://pokeapi.co/api/v2/language/5/"
+        },
+        "name": "Robustesse"
+      },
+      {
+        "color": "Yellow",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        },
+        "name": "Tough"
+      },
+      {
+        "color": "黄",
+        "language": {
+          "name": "zh-Hans",
+          "url": "https://pokeapi.co/api/v2/language/12/"
+        },
+        "name": "强壮"
+      }
+    ]
+  }
+]

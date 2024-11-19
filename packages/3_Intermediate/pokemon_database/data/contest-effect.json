@@ -1,0 +1,761 @@
+[
+  {
+    "appeal": 4,
+    "effect_entries": [
+      {
+        "effect": "Gives a high number of appeal points wth no other effects.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "A highly appealing move.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 1,
+    "jam": 0
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "If the Pokémon that appealed before the user earned less than three appeal points, user earns six; if three, user earns three; if more than three, user earns none.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Affected by how well the appeal in front goes.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 2,
+    "jam": 0
+  },
+  {
+    "appeal": 6,
+    "effect_entries": [
+      {
+        "effect": "If the user is jammed this turn after using this move, it will receive twice as many jam points.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "After this move, the user is more easily startled.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 3,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam the Pokémon that appealed before the user.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Badly startles the Pokémon in front.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 4,
+    "jam": 4
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam all Pokémon that have appealed this turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Badly startles those that have made appeals.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 5,
+    "jam": 3
+  },
+  {
+    "appeal": 4,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam the other Pokémon.  The user cannot make an appeal on the next turn, but it cannot be jammed either.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Jams the others, and misses one turn of appeals.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 6,
+    "jam": 4
+  },
+  {
+    "appeal": 8,
+    "effect_entries": [
+      {
+        "effect": "User cannot make any more appeals for the remainder of the contest.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Makes a great appeal, but allows no more to the end.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 7,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam all Pokémon that have appealed this turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Startles all Pokémon that have done their appeals.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 8,
+    "jam": 2
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam the Pokémon that appealed before the user.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Startles the Pokémon that appealed before the user.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 9,
+    "jam": 3
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam all Pokémon that have appealed this turn.  If a Pokémon is in combo standby status, it is jammed 5 points instead of 1.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Startles the Pokémon that has the judge's attention.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 10,
+    "jam": 1
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "If the Applause meter is empty or at one, earns one point; if two, earns three points; if three, earns four points; if four, earns six points.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The appeal works best the more the crowd is excited.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 11,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "If the last Pokémon's appeal is the same type as this move, user earns six points instead of two.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Works well if it's the same type as the one before.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 12,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "Always adds a point to the applause meter, regardless of whether the move matches the contest, and can likewise gain the applause bonus.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "An appeal that excites the audience in any contest.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 13,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam all Pokémon that have appealed this turn for half their appeal points (minimum 1).",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Badly startles all Pokémon that made good appeals.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 14,
+    "jam": 1
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "Prevents jamming for the rest of this turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Can avoid being startled by others.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 15,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "Prevents the next jam on this turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Can avoid being startled by others once.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 16,
+    "jam": 0
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "Repeated use does not incur a penalty.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Can be repeatedly used without boring the judge.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 17,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "Attempts to make all following Pokémon nervous (and thus unable to appeal).",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Makes all Pokémon after the user nervous.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 18,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "User earns appeal points equal to the points the previous Pokémon earned plus one.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Makes the appeal as good as the one before it.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 19,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "User earns appeal points equal to half the points ALL the previous Pokémon earned plus one.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Makes the appeal as good as those before it.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 20,
+    "jam": 0
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "Shuffles the next turn's turn order.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Scrambles up the order of appeals on the next turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 21,
+    "jam": 0
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "Cancels combo standby status for all Pokémon that have appealed this turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Shifts the judge's attention from others.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 22,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "Attempts to jam all Pokémon that have appealed this turn.  If a Pokémon used the same type move as this one, it is jammed for 4 points instead of 1.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Startles Pokémon that made a same-type appeal.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 23,
+    "jam": 1
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "Prevents the Applause Meter from rising for the rest of the turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Temporarily stops the crowd from getting excited.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 24,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "Randomly earns one, two, four, or eight points.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The appeal's quality depends on its timing.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 25,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "If user appeals first this turn, earns one point; if second, two points; if third, four points; if last, six points.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The appeal works better the later it is performed.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 26,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "If user appeals first this turn, earns six points instead of two.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The appeal works great if performed first.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 27,
+    "jam": 0
+  },
+  {
+    "appeal": 2,
+    "effect_entries": [
+      {
+        "effect": "If user appeals last this turn, earns six points instead of two.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The appeal works great if performed last.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 28,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "If user has no stars, earns one point; if one, three points; if two, five points; if three, seven points.  This does not include the appeal point bonus the stars give.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The appeal works well if the user's condition is good.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 29,
+    "jam": 0
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "User will go first next turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The next appeal can be made earlier next turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 30,
+    "jam": 0
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "User will go last next turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "The next appeal can be made later next turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 31,
+    "jam": 0
+  },
+  {
+    "appeal": 1,
+    "effect_entries": [
+      {
+        "effect": "User gains one star.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Ups the user's condition.  Helps prevent nervousness.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 32,
+    "jam": 0
+  },
+  {
+    "appeal": 3,
+    "effect_entries": [
+      {
+        "effect": "Removes all stars from all Pokémon that have appealed this turn.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "flavor_text_entries": [
+      {
+        "flavor_text": "Worsens the condition of those that made appeals.",
+        "language": {
+          "name": "en",
+          "url": "https://pokeapi.co/api/v2/language/9/"
+        }
+      }
+    ],
+    "id": 33,
+    "jam": 0
+  }
+]
