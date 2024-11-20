@@ -7,6 +7,6 @@ const generationByReference = new Generation({
 });
 
 const versionGroup = new VersionGroup(1);
-console.log(versionGroup.id, versionGroup.name, versionGroup.generation.name);
+console.log(versionGroup.id, versionGroup.name, versionGroup.generation.name, versionGroup.regions[0].name);
 // console.log({ type: 'by id', name: generationById.name, id: generationById.id });
 // console.log({ type: 'by reference', name: generationByReference.name, id: generationByReference.id });
