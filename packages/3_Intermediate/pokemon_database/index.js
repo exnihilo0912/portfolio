@@ -1,11 +1,11 @@
 const fs = require('fs');
 
-async function resolveUrl(url) {
+function resolveUrl(url) {
   const [entity, id] = url.split('/').slice(-3, -1);
-  console.log({ entity, id });
+  return { entity, id };
 }
 
-async function resolveEntity(name, id, depth, shape) {
+function resolveEntity(name, id, depth = 1) {
   const entityFilePath = `./data/${name}.json`;
   const doesEntityExist = fs.existsSync(entityFilePath);
   if (!doesEntityExist) {
@@ -13,8 +13,31 @@ async function resolveEntity(name, id, depth, shape) {
   }
 
   const entities = require(entityFilePath);
-  const targetEntity = entities.find(({ id: entityId }) => entityId === id)
-  console.log(targetEntity);
+  const targetEntity = { ...(entities.find(({ id: entityId }) => entityId === id) || {}) }
+  for (prop in targetEntity) {
+    const isObject = typeof targetEntity[prop] === 'object';
+    if (isObject && 'url' in targetEntity[prop]) {
+      const { entity, id } = resolveUrl(targetEntity[prop].url);
+      if ((depth - 1) >= 0) {
+        targetEntity[prop] = resolveEntity(entity, Number(id), depth - 1);
+      }
+    } else if (isObject && Array.isArray(targetEntity[prop])) {
+      // console.log(targetEntity[prop]);
+      let i = 0;
+      const entries = targetEntity[prop];
+      for (const obj of targetEntity[prop]) {
+        if ('url' in obj) {
+          const { entity, id } = resolveUrl(obj.url);
+          if ((depth - 1) >= 0) {
+            // console.log(entries[i])
+            entries[i] = resolveEntity(entity, Number(id), depth - 1);
+          }
+        }
+        i++;
+      }
+    }
+  }
+  return targetEntity;
 }
 
 // const testUrls = [
@@ -27,4 +50,5 @@ async function resolveEntity(name, id, depth, shape) {
 //   resolveUrl(url);
 // }
 
-resolveEntity('version-group', 11);
+const result = resolveEntity('version-group', 1);
+console.log(result);
