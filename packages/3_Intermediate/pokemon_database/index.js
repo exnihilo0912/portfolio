@@ -15,21 +15,20 @@ function resolveEntity(name, id, depth = 1) {
   const entities = require(entityFilePath);
   const targetEntity = { ...(entities.find(({ id: entityId }) => entityId === id) || {}) }
   for (prop in targetEntity) {
-    const isObject = typeof targetEntity[prop] === 'object';
+    const isObject = typeof targetEntity[prop] === 'object' && targetEntity[prop] !== null;
     if (isObject && 'url' in targetEntity[prop]) {
       const { entity, id } = resolveUrl(targetEntity[prop].url);
       if ((depth - 1) >= 0) {
         targetEntity[prop] = resolveEntity(entity, Number(id), depth - 1);
       }
     } else if (isObject && Array.isArray(targetEntity[prop])) {
-      // console.log(targetEntity[prop]);
       let i = 0;
       const entries = targetEntity[prop];
       for (const obj of targetEntity[prop]) {
-        if ('url' in obj) {
+        const isObj = typeof obj === 'object' && obj !== null;
+        if (isObj && 'url' in obj) {
           const { entity, id } = resolveUrl(obj.url);
           if ((depth - 1) >= 0) {
-            // console.log(entries[i])
             entries[i] = resolveEntity(entity, Number(id), depth - 1);
           }
         }
@@ -50,5 +49,7 @@ function resolveEntity(name, id, depth = 1) {
 //   resolveUrl(url);
 // }
 
-const result = resolveEntity('version-group', 1);
-console.log(result);
+const result = resolveEntity('version-group', 1, 2);
+// console.log(result);
+
+fs.writeFileSync(`${__dirname}/test.json`, JSON.stringify(result));
