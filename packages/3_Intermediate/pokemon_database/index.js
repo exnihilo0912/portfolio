@@ -6,5 +6,7 @@ const generationByReference = new Generation({
   "url": "https://pokeapi.co/api/v2/generation/1/"
 });
 
-console.log({ type: 'by id', name: generationById.name, id: generationById.id });
-console.log({ type: 'by reference', name: generationByReference.name, id: generationByReference.id });
+const versionGroup = new VersionGroup(1);
+console.log(versionGroup.id, versionGroup.name, versionGroup.generation.name);
+// console.log({ type: 'by id', name: generationById.name, id: generationById.id });
+// console.log({ type: 'by reference', name: generationByReference.name, id: generationByReference.id });
