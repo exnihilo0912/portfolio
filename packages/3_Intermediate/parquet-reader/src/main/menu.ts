@@ -43,6 +43,12 @@ export default class MenuBuilder {
 
       Menu.buildFromTemplate([
         {
+          label: 'Phony menu option',
+          click: () => {
+            console.log(this.mainWindow.webContents);
+          },
+        },
+        {
           label: 'Inspect element',
           click: () => {
             this.mainWindow.webContents.inspectElement(x, y);

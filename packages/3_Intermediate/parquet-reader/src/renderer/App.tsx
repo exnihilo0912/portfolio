@@ -1,40 +1,31 @@
+// import fs from 'fs';
+// import pl from 'nodejs-polars';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
 import './App.css';
+
+// const readParquetFiles = (dir, dfArray = []) => {
+//   const entries = fs.readdirSync(dir, {
+//     withFileTypes: true,
+//   });
+//   for (const entry of entries) {
+//     const fullPath = `${dir}/${entry.name}`;
+//     if (entry.isDirectory()) {
+//       readParquetFiles(fullPath, dfArray);
+//     } else if (entry.isFile() && entry.name.endsWith('.parquet')) {
+//       const df = pl.readParquet(fullPath, {
+//         numRows: 500,
+//       });
+//       dfArray.push(df);
+//     }
+//   }
+//   return dfArray;
+// };
 
 function Hello() {
   return (
     <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
-      </div>
+      <h1>Parquet file reader</h1>
+      <p>Some random text</p>
     </div>
   );
 }
